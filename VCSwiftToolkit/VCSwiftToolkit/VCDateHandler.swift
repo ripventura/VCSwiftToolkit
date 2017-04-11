@@ -14,9 +14,12 @@ let defaultLocaleHelper : VCLocaleHelper = VCLocaleHelper()
 
 
 class VCLocaleHelper {
+    /** Timezone used on all Date operations by VCDateHandler.
+      * Change this if your application needs to operate in a custom Timezone.  **/
     private var applicationTimezone : TimeZone
     
     init() {
+        // Starts with the Device's current timezone
         self.applicationTimezone = TimeZone.current
     }
     
@@ -24,7 +27,7 @@ class VCLocaleHelper {
      * Sets the Application Default Timezone
      */
     func setCurrentTimezone(timezone : TimeZone) {
-        print("Application Timezone: " + timezone.identifier)
+        //print("Application Timezone: " + timezone.identifier)
         self.applicationTimezone = timezone
     }
     /**
@@ -42,10 +45,9 @@ class VCLocaleHelper {
     /**
      * Returns the UTC Timezone
      */
-    func utcTimezone() -> NSTimeZone {
-        return NSTimeZone(abbreviation: "UTC")!
+    func utcTimezone() -> TimeZone {
+        return TimeZone(abbreviation: "UTC")!
     }
-    
     
     /**
      * Returns a DateFormatter object, formatted to the device preferred language, rather than the standard Region Format
@@ -148,6 +150,8 @@ class VCDateHandler {
         /** September, 2016 **/
         case MonthNameLongYearLongFormat = "MMMM, yyyy"
         
+        /** 07:59:59 **/
+        case TimeISO = "HH:mm:ss"
         
         /** 07 **/
         case TimeHour12LongFormat = "hh"
@@ -184,7 +188,7 @@ class VCDateHandler {
         
         let dateFormatter = defaultLocaleHelper.localizedDateFormatter()
         dateFormatter.dateFormat = dateFormat.rawValue
-        dateFormatter.timeZone = NSTimeZone(name: timezoneName) as TimeZone!
+        dateFormatter.timeZone = TimeZone(identifier: timezoneName)
         
         return dateFormatter.string(from: date as Date)
     }
@@ -200,7 +204,7 @@ class VCDateHandler {
      */
     func stringFromDateForUTCTimezone(date : Date, dateFormat : DateFormat) -> String {
         
-        return self.stringFromDate(date: date, dateFormat: dateFormat, timezoneName: defaultLocaleHelper.utcTimezone().name)
+        return self.stringFromDate(date: date, dateFormat: dateFormat, timezoneName: defaultLocaleHelper.utcTimezone().identifier)
     }
     
     
@@ -211,7 +215,7 @@ class VCDateHandler {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat.rawValue
-        dateFormatter.timeZone = NSTimeZone(name: timezoneName) as TimeZone!
+        dateFormatter.timeZone = TimeZone(identifier: timezoneName)
         
         return dateFormatter.date(from: string)
     }
@@ -227,7 +231,7 @@ class VCDateHandler {
      */
     func dateFromStringForUTCTimezone(string : String, dateFormat : DateFormat) -> Date? {
         
-        return self.dateFromString(string: string, dateFormat: dateFormat, timezoneName: defaultLocaleHelper.utcTimezone().name)
+        return self.dateFromString(string: string, dateFormat: dateFormat, timezoneName: defaultLocaleHelper.utcTimezone().identifier)
     }
     
     
@@ -280,70 +284,51 @@ class VCDateHandler {
     /**
      * Sets the Year of the given Date
      */
-    func setYearForDate(date : Date, year : Int) -> Date {
+    func setYearForDate(date : Date, year : Int, referenceTimezone : TimeZone = defaultLocaleHelper.currentTimezone()) -> Date {
         
-        let dateComponents = self.getCalendarDateComponents(date: date)
+        var dateString = String(format: "%d", year)
+        dateString = dateString + "-" + self.stringFromDate(date: date, dateFormat: .MonthLongFormat, timezoneName: referenceTimezone.identifier)
+        dateString = dateString + "-" + self.stringFromDate(date: date, dateFormat: .DayLongFormat, timezoneName: referenceTimezone.identifier)
+        dateString = dateString + " " + self.stringFromDate(date: date, dateFormat: .TimeISO, timezoneName: referenceTimezone.identifier)
         
-        var comp = DateComponents()
-        comp.month = dateComponents.month
-        comp.year = year
-        comp.day = dateComponents.day
-        comp.hour = dateComponents.hour
-        comp.minute = dateComponents.minute
-        comp.second = dateComponents.second
-        
-        return Calendar.current.date(from: comp)!
+        return defaultDateHandler.dateFromString(string: dateString, dateFormat: .DateTimeISO, timezoneName: referenceTimezone.identifier)!
     }
     /**
      * Sets the Month of the given Date
      */
-    func setMonthForDate(date : Date, month : Int) -> Date {
+    func setMonthForDate(date : Date, month : Int, referenceTimezone : TimeZone = defaultLocaleHelper.currentTimezone()) -> Date {
         
-        let dateComponents = self.getCalendarDateComponents(date: date)
+        var dateString = self.stringFromDate(date: date, dateFormat: .YearLongFormat, timezoneName: referenceTimezone.identifier)
+        dateString = dateString + "-" + String(format: "%d", month)
+        dateString = dateString + "-" + self.stringFromDate(date: date, dateFormat: .DayLongFormat, timezoneName: referenceTimezone.identifier)
+        dateString = dateString + " " + self.stringFromDate(date: date, dateFormat: .TimeISO, timezoneName: referenceTimezone.identifier)
         
-        var comp = DateComponents()
-        comp.month = month
-        comp.year = dateComponents.year
-        comp.day = dateComponents.day
-        comp.hour = dateComponents.hour
-        comp.minute = dateComponents.minute
-        comp.second = dateComponents.second
-        
-        return Calendar.current.date(from: comp)!
+        return defaultDateHandler.dateFromString(string: dateString, dateFormat: .DateTimeISO, timezoneName: referenceTimezone.identifier)!
     }
     /**
      * Sets the Day of the given Date
      */
-    func setDayForDate(date : Date, day : Int) -> Date {
+    func setDayForDate(date : Date, day : Int, referenceTimezone : TimeZone = defaultLocaleHelper.currentTimezone()) -> Date {
         
-        let dateComponents = self.getCalendarDateComponents(date: date)
+        var dateString = self.stringFromDate(date: date, dateFormat: .YearLongFormat, timezoneName: referenceTimezone.identifier)
+        dateString = dateString + "-" + self.stringFromDate(date: date, dateFormat: .MonthLongFormat, timezoneName: referenceTimezone.identifier)
+        dateString = dateString + "-" + String(format: "%d", day)
+        dateString = dateString + " " + self.stringFromDate(date: date, dateFormat: .TimeISO, timezoneName: referenceTimezone.identifier)
         
-        var comp = DateComponents()
-        comp.month = dateComponents.month
-        comp.year = dateComponents.year
-        comp.day = day
-        comp.hour = dateComponents.hour
-        comp.minute = dateComponents.minute
-        comp.second = dateComponents.second
-        
-        return Calendar.current.date(from: comp)!
+        return defaultDateHandler.dateFromString(string: dateString, dateFormat: .DateTimeISO, timezoneName: referenceTimezone.identifier)!
     }
     /**
      * Sets the Time of the given Date.
      * As all Date objects are UTC when computed, the referenceTimezone is used to compensate the offset on the seconds field
      */
     func setTimeForDate(date : Date, hour : Int, minute : Int, second : Int, referenceTimezone : TimeZone = defaultLocaleHelper.currentTimezone()) -> Date {
-        let dateComponents = self.getCalendarDateComponents(date: date)
         
-        var comp = DateComponents()
-        comp.month = dateComponents.month
-        comp.year = dateComponents.year
-        comp.day = dateComponents.day
-        comp.hour = hour
-        comp.minute = minute
-        comp.second = second
+        var dateString = self.stringFromDate(date: date, dateFormat: .DateISO, timezoneName: referenceTimezone.identifier)
+        dateString = dateString + " " + String(format: "%d", hour)
+        dateString = dateString + ":" + String(format: "%d", minute)
+        dateString = dateString + ":" + String(format: "%d", second)
         
-        return Calendar.current.date(from: comp)!.addingTimeInterval(TimeInterval(Int(referenceTimezone.secondsFromGMT(for: date) * -1) + defaultLocaleHelper.deviceTimezone().secondsFromGMT(for: date)))
+        return defaultDateHandler.dateFromString(string: dateString, dateFormat: .DateTimeISO, timezoneName: referenceTimezone.identifier)!
     }
     
     
@@ -401,17 +386,5 @@ class VCDateHandler {
         else {
             return date.timeIntervalSince(startDate as Date) > 0 && date.timeIntervalSince(endDate as Date) < 0
         }
-    }
-    
-    // Returns all the given Date's dateComponents for the current Calendar
-    private func getCalendarDateComponents(date : Date) -> DateComponents {
-        let calendar = Calendar.current
-        return calendar.dateComponents([Calendar.Component.day,
-                                        Calendar.Component.month,
-                                        Calendar.Component.year,
-                                        Calendar.Component.hour,
-                                        Calendar.Component.minute,
-                                        Calendar.Component.second],
-                                       from: date)
     }
 }

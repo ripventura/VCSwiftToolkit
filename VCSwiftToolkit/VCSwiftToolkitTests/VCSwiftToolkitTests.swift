@@ -11,26 +11,73 @@ import XCTest
 
 class VCSwiftToolkitTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testDegToRad() {
+        XCTAssertEqual(String(format: "%.4f", degreesToRadians(1)), "0.0175", "Failed converting Degrees to Radians")
+        XCTAssertEqual(String(format: "%.4f", degreesToRadians(90)), "1.5708", "Failed converting Degrees to Radians")
+        XCTAssertEqual(String(format: "%.4f", degreesToRadians(180)), "3.1416", "Failed converting Degrees to Radians")
+        XCTAssertEqual(String(format: "%.4f", degreesToRadians(270)), "4.7124", "Failed converting Degrees to Radians")
+        XCTAssertEqual(String(format: "%.4f", degreesToRadians(360)), "6.2832", "Failed converting Degrees to Radians")
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testRadToDeg() {
+        XCTAssertEqual(String(format: "%.4f", radiansToDegrees(1)), "57.2958", "Failed converting Radians to Degrees")
+        XCTAssertEqual(String(format: "%.4f", radiansToDegrees(3)), "171.8873", "Failed converting Radians to Degrees")
+        XCTAssertEqual(String(format: "%.4f", radiansToDegrees(5)), "286.4789", "Failed converting Radians to Degrees")
+        XCTAssertEqual(String(format: "%.4f", radiansToDegrees(7)), "401.0705", "Failed converting Radians to Degrees")
+        
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGetAllAvailableFonts() {
+        XCTAssertNotNil(defaultObjectToolkit.getAvailableFonts(), "Failed getting all available Fonts")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testGetAvailableLocales() {
+        XCTAssertNotNil(defaultObjectToolkit.getAvailabelLocales(), "Failed getting available Locales")
+    }
+    
+    func testGetRootNavigationViewFromViewController() {
+        let singleVC = UIViewController()
+        XCTAssertNil(defaultObjectToolkit.getRootNavigationViewFromViewController(viewController: singleVC), "Failed getting view from root navigationcontroller")
+        
+        _ = UINavigationController(rootViewController: singleVC)
+        XCTAssertNotNil(defaultObjectToolkit.getRootNavigationViewFromViewController(viewController: singleVC), "Failed getting view from root navigationcontroller")
+    }
+    
+    func testConvertAnyObjectToJSONData() {
+        let nsMutableDict = NSMutableDictionary()
+        
+        XCTAssertNotNil(defaultObjectToolkit.convertAnyObjectToJSONData(object: nsMutableDict as AnyObject), "Failed converting empty NSMutableDictionary to JSON Data")
+        
+        nsMutableDict.setObject("Test", forKey: "String" as NSCopying)
+        nsMutableDict.setObject(Int(123), forKey: "Int" as NSCopying)
+        nsMutableDict.setObject(Double(123.45), forKey: "Double" as NSCopying)
+        
+        XCTAssertNotNil(defaultObjectToolkit.convertAnyObjectToJSONData(object: nsMutableDict), "Failed converting NSMutableDictionary to JSON Data")
+        
+        
+        var dict : [String : Any] = [:]
+        
+        XCTAssertNotNil(defaultObjectToolkit.convertAnyObjectToJSONData(object: dict as AnyObject), "Failed converting empty Dictionary to JSON Data")
+        
+        dict["String"] = "Test"
+        dict["Int"] = Int(123)
+        dict["Double"] = Double(123.45)
+        dict["Dict"] = ["Dict" : ["Array" : ["Test", 123]]]
+        
+        XCTAssertNotNil(defaultObjectToolkit.convertAnyObjectToJSONData(object: dict as AnyObject), "Failed converting Dictionary to JSON Data")
+        
+        
+        var array : [Any] = []
+        
+        XCTAssertNotNil(defaultObjectToolkit.convertAnyObjectToJSONData(object: array as AnyObject), "Failed converting empty Array to JSON Data")
+        
+        array.append("Test")
+        array.append(Int(123))
+        array.append(Double(123.45))
+        array.append(["Dict" : ["Array" : ["Test", 123]]])
+        
+        XCTAssertNotNil(defaultObjectToolkit.convertAnyObjectToJSONData(object: array as AnyObject), "Failed converting Array to JSON Data")
+        
     }
     
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Rolfson Oil. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension Dictionary {
     /** Appends another dictionary into this one **/
@@ -217,27 +217,10 @@ extension String {
     }
     
     /**
-     * Returns the String lenght or Nil if the String has 0 characters
+     * Returns the String lenght
      */
-    var vcLenght : Int? {
-        return self.characters.count == 0 ? nil : self.characters.count
+    var vcLenght : Int {
+        return self.characters.count
     }
     
-    /**
-     * Reads a local JSON file and returns its Data
-     */
-    func vcJSONFileAtLocalPath() -> Data? {
-        
-        // Load the file into an Data object called JSONData
-        
-        
-        do {
-            let data = try Data(contentsOf: URL(fileURLWithPath: self), options: Data.ReadingOptions.mappedIfSafe)
-            
-            return data
-        }
-        catch {
-            return nil
-        }
-    }
 }

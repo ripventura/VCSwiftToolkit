@@ -7,12 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1873C9971E9D7D6700BC4668 /* VCDateHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873C9961E9D7D6700BC4668 /* VCDateHandlerTests.swift */; };
+		1873C9991E9D8EC300BC4668 /* ExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873C9981E9D8EC300BC4668 /* ExtensionsTest.swift */; };
+		1873C99B1E9D90FB00BC4668 /* TestJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 1873C99A1E9D90FB00BC4668 /* TestJSON.json */; };
 		18A703F71E9D45800086759A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A703F61E9D45800086759A /* AppDelegate.swift */; };
 		18A703F91E9D45810086759A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A703F81E9D45810086759A /* ViewController.swift */; };
 		18A703FC1E9D45810086759A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A703FA1E9D45810086759A /* Main.storyboard */; };
 		18A703FE1E9D45810086759A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A703FD1E9D45810086759A /* Assets.xcassets */; };
 		18A704011E9D45810086759A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A703FF1E9D45810086759A /* LaunchScreen.storyboard */; };
 		18A7040C1E9D45810086759A /* VCSwiftToolkitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7040B1E9D45810086759A /* VCSwiftToolkitTests.swift */; };
+		18A7041C1E9D45A20086759A /* VCSwiftToolkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A704171E9D45A20086759A /* VCSwiftToolkit.swift */; };
+		18A7041D1E9D45A20086759A /* VCDateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A704181E9D45A20086759A /* VCDateHandler.swift */; };
+		18A7041F1E9D45A20086759A /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7041A1E9D45A20086759A /* LocalNotificationHelper.swift */; };
+		18A704201E9D45A20086759A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7041B1E9D45A20086759A /* Extensions.swift */; };
+		18A704221E9D46FC0086759A /* VCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A704211E9D46FC0086759A /* VCFileManager.swift */; };
+		18A704241E9D4C2F0086759A /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A704231E9D4C2F0086759A /* TestView.xib */; };
+		18A704261E9D523A0086759A /* VCFileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A704251E9D523A0086759A /* VCFileManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1873C9961E9D7D6700BC4668 /* VCDateHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCDateHandlerTests.swift; sourceTree = "<group>"; };
+		1873C9981E9D8EC300BC4668 /* ExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsTest.swift; sourceTree = "<group>"; };
+		1873C99A1E9D90FB00BC4668 /* TestJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestJSON.json; sourceTree = "<group>"; };
 		18A703F31E9D45800086759A /* VCSwiftToolkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCSwiftToolkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A703F61E9D45800086759A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A703F81E9D45810086759A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +49,13 @@
 		18A704071E9D45810086759A /* VCSwiftToolkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VCSwiftToolkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A7040B1E9D45810086759A /* VCSwiftToolkitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSwiftToolkitTests.swift; sourceTree = "<group>"; };
 		18A7040D1E9D45810086759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A704171E9D45A20086759A /* VCSwiftToolkit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCSwiftToolkit.swift; sourceTree = "<group>"; };
+		18A704181E9D45A20086759A /* VCDateHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCDateHandler.swift; sourceTree = "<group>"; };
+		18A7041A1E9D45A20086759A /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
+		18A7041B1E9D45A20086759A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		18A704211E9D46FC0086759A /* VCFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCFileManager.swift; sourceTree = "<group>"; };
+		18A704231E9D4C2F0086759A /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
+		18A704251E9D523A0086759A /* VCFileManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCFileManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +97,12 @@
 		18A703F51E9D45800086759A /* VCSwiftToolkit */ = {
 			isa = PBXGroup;
 			children = (
+				18A704161E9D45940086759A /* Sources */,
 				18A703F61E9D45800086759A /* AppDelegate.swift */,
 				18A703F81E9D45810086759A /* ViewController.swift */,
 				18A703FA1E9D45810086759A /* Main.storyboard */,
+				18A704231E9D4C2F0086759A /* TestView.xib */,
+				1873C99A1E9D90FB00BC4668 /* TestJSON.json */,
 				18A703FD1E9D45810086759A /* Assets.xcassets */,
 				18A703FF1E9D45810086759A /* LaunchScreen.storyboard */,
 				18A704021E9D45810086759A /* Info.plist */,
@@ -91,9 +114,24 @@
 			isa = PBXGroup;
 			children = (
 				18A7040B1E9D45810086759A /* VCSwiftToolkitTests.swift */,
+				18A704251E9D523A0086759A /* VCFileManagerTests.swift */,
+				1873C9961E9D7D6700BC4668 /* VCDateHandlerTests.swift */,
+				1873C9981E9D8EC300BC4668 /* ExtensionsTest.swift */,
 				18A7040D1E9D45810086759A /* Info.plist */,
 			);
 			path = VCSwiftToolkitTests;
+			sourceTree = "<group>";
+		};
+		18A704161E9D45940086759A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				18A704171E9D45A20086759A /* VCSwiftToolkit.swift */,
+				18A704211E9D46FC0086759A /* VCFileManager.swift */,
+				18A704181E9D45A20086759A /* VCDateHandler.swift */,
+				18A7041A1E9D45A20086759A /* LocalNotificationHelper.swift */,
+				18A7041B1E9D45A20086759A /* Extensions.swift */,
+			);
+			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +219,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A704241E9D4C2F0086759A /* TestView.xib in Resources */,
 				18A704011E9D45810086759A /* LaunchScreen.storyboard in Resources */,
 				18A703FE1E9D45810086759A /* Assets.xcassets in Resources */,
 				18A703FC1E9D45810086759A /* Main.storyboard in Resources */,
+				1873C99B1E9D90FB00BC4668 /* TestJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,8 +241,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A7041F1E9D45A20086759A /* LocalNotificationHelper.swift in Sources */,
 				18A703F91E9D45810086759A /* ViewController.swift in Sources */,
 				18A703F71E9D45800086759A /* AppDelegate.swift in Sources */,
+				18A7041C1E9D45A20086759A /* VCSwiftToolkit.swift in Sources */,
+				18A7041D1E9D45A20086759A /* VCDateHandler.swift in Sources */,
+				18A704201E9D45A20086759A /* Extensions.swift in Sources */,
+				18A704221E9D46FC0086759A /* VCFileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +255,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A704261E9D523A0086759A /* VCFileManagerTests.swift in Sources */,
+				1873C9971E9D7D6700BC4668 /* VCDateHandlerTests.swift in Sources */,
 				18A7040C1E9D45810086759A /* VCSwiftToolkitTests.swift in Sources */,
+				1873C9991E9D8EC300BC4668 /* ExtensionsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +391,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SP4YBHKU7H;
 				INFOPLIST_FILE = VCSwiftToolkit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitorcesco.VCSwiftToolkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -356,6 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SP4YBHKU7H;
 				INFOPLIST_FILE = VCSwiftToolkit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitorcesco.VCSwiftToolkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +462,7 @@
 				18A704121E9D45810086759A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18A704131E9D45810086759A /* Build configuration list for PBXNativeTarget "VCSwiftToolkitTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +471,7 @@
 				18A704151E9D45810086759A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

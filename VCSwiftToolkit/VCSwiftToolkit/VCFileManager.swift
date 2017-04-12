@@ -8,6 +8,8 @@
 
 import UIKit
 
+let sharedFileManager : VCFileManager = VCFileManager()
+
 class VCOperationResult {
     let success : Bool
     let error : NSError?

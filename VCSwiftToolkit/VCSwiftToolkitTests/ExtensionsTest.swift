@@ -29,7 +29,7 @@ class ExtensionsTest: XCTestCase {
         let fileName = "TestJSON"
         let fileExtension = "json"
         
-        XCTAssertNotNil(defaultFileManager.readJSON(fileName: fileName, fileExtension: fileExtension, directory: defaultFileManager.directoryBundle!, customFolder: nil))
+        XCTAssertNotNil(sharedFileManager.readJSON(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryBundle!, customFolder: nil))
     }
     /** Data Tests **/
     

@@ -13,7 +13,7 @@
 import Foundation
 import AVKit
 
-let defaultLocalNotificationHelper : LocalNotificationHelper = LocalNotificationHelper()
+let sharedLocalNotificationHelper : LocalNotificationHelper = LocalNotificationHelper()
 
 
 enum LocalNotificationAction: String {

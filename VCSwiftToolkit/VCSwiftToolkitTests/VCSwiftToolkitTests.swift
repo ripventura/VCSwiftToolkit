@@ -28,55 +28,55 @@ class VCSwiftToolkitTests: XCTestCase {
     }
     
     func testGetAllAvailableFonts() {
-        XCTAssertNotNil(defaultObjectToolkit.getAvailableFonts(), "Failed getting all available Fonts")
+        XCTAssertNotNil(sharedObjectToolkit.getAvailableFonts(), "Failed getting all available Fonts")
     }
     
     func testGetAvailableLocales() {
-        XCTAssertNotNil(defaultObjectToolkit.getAvailabelLocales(), "Failed getting available Locales")
+        XCTAssertNotNil(sharedObjectToolkit.getAvailabelLocales(), "Failed getting available Locales")
     }
     
     func testGetRootNavigationViewFromViewController() {
         let singleVC = UIViewController()
-        XCTAssertNil(defaultObjectToolkit.getRootNavigationViewFromViewController(viewController: singleVC), "Failed getting view from root navigationcontroller")
+        XCTAssertNil(sharedObjectToolkit.getRootNavigationViewFromViewController(viewController: singleVC), "Failed getting view from root navigationcontroller")
         
         _ = UINavigationController(rootViewController: singleVC)
-        XCTAssertNotNil(defaultObjectToolkit.getRootNavigationViewFromViewController(viewController: singleVC), "Failed getting view from root navigationcontroller")
+        XCTAssertNotNil(sharedObjectToolkit.getRootNavigationViewFromViewController(viewController: singleVC), "Failed getting view from root navigationcontroller")
     }
     
     func testConvertAnyObjectToJSONData() {
         let nsMutableDict = NSMutableDictionary()
         
-        XCTAssertNotNil(defaultObjectToolkit.convertAnyObjectToJSONData(object: nsMutableDict as AnyObject), "Failed converting empty NSMutableDictionary to JSON Data")
+        XCTAssertNotNil(sharedObjectToolkit.convertAnyObjectToJSONData(object: nsMutableDict as AnyObject), "Failed converting empty NSMutableDictionary to JSON Data")
         
         nsMutableDict.setObject("Test", forKey: "String" as NSCopying)
         nsMutableDict.setObject(Int(123), forKey: "Int" as NSCopying)
         nsMutableDict.setObject(Double(123.45), forKey: "Double" as NSCopying)
         
-        XCTAssertNotNil(defaultObjectToolkit.convertAnyObjectToJSONData(object: nsMutableDict), "Failed converting NSMutableDictionary to JSON Data")
+        XCTAssertNotNil(sharedObjectToolkit.convertAnyObjectToJSONData(object: nsMutableDict), "Failed converting NSMutableDictionary to JSON Data")
         
         
         var dict : [String : Any] = [:]
         
-        XCTAssertNotNil(defaultObjectToolkit.convertAnyObjectToJSONData(object: dict as AnyObject), "Failed converting empty Dictionary to JSON Data")
+        XCTAssertNotNil(sharedObjectToolkit.convertAnyObjectToJSONData(object: dict as AnyObject), "Failed converting empty Dictionary to JSON Data")
         
         dict["String"] = "Test"
         dict["Int"] = Int(123)
         dict["Double"] = Double(123.45)
         dict["Dict"] = ["Dict" : ["Array" : ["Test", 123]]]
         
-        XCTAssertNotNil(defaultObjectToolkit.convertAnyObjectToJSONData(object: dict as AnyObject), "Failed converting Dictionary to JSON Data")
+        XCTAssertNotNil(sharedObjectToolkit.convertAnyObjectToJSONData(object: dict as AnyObject), "Failed converting Dictionary to JSON Data")
         
         
         var array : [Any] = []
         
-        XCTAssertNotNil(defaultObjectToolkit.convertAnyObjectToJSONData(object: array as AnyObject), "Failed converting empty Array to JSON Data")
+        XCTAssertNotNil(sharedObjectToolkit.convertAnyObjectToJSONData(object: array as AnyObject), "Failed converting empty Array to JSON Data")
         
         array.append("Test")
         array.append(Int(123))
         array.append(Double(123.45))
         array.append(["Dict" : ["Array" : ["Test", 123]]])
         
-        XCTAssertNotNil(defaultObjectToolkit.convertAnyObjectToJSONData(object: array as AnyObject), "Failed converting Array to JSON Data")
+        XCTAssertNotNil(sharedObjectToolkit.convertAnyObjectToJSONData(object: array as AnyObject), "Failed converting Array to JSON Data")
         
     }
     

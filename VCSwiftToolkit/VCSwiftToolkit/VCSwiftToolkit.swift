@@ -8,8 +8,7 @@
 
 import UIKit
 
-let defaultObjectToolkit : VCObjectsToolkit = VCObjectsToolkit()
-let defaultFileManager : VCFileManager = VCFileManager()
+let sharedObjectToolkit : VCObjectsToolkit = VCObjectsToolkit()
 
 let radiansToDegrees: (CGFloat) -> CGFloat = {
     return $0 * (180.0 / CGFloat(Double.pi))

@@ -80,4 +80,7 @@ class VCSwiftToolkitTests: XCTestCase {
         
     }
     
+    func testQRCodeImage() {
+        XCTAssertNotNil(sharedObjectToolkit.qrCode(fromString: "Test String", withSize: CGSize(width: 100, height: 100)))
+    }
 }

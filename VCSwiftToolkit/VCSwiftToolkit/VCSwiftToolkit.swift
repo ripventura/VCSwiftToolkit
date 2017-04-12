@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QRCode
 
 let sharedObjectToolkit : VCObjectsToolkit = VCObjectsToolkit()
 
@@ -92,5 +93,15 @@ class VCObjectsToolkit {
         catch {
             return nil
         }
+    }
+    
+    /**
+     * Generates a QRCode image from a given String, with the given Size
+     */
+    func qrCode(fromString string: String, withSize size: CGSize) -> UIImage? {
+        var qrCode = QRCode(string)
+        qrCode?.size = size
+        
+        return qrCode?.image
     }
 }

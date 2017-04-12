@@ -6,6 +6,7 @@ target 'VCSwiftToolkit' do
   use_frameworks!
 
   # Pods for VCSwiftToolkit
+pod 'QRCode'
 
   target 'VCSwiftToolkitTests' do
     inherit! :search_paths

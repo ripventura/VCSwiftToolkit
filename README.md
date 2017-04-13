@@ -11,11 +11,6 @@ For now, here's how to use it:
 # Installing
 - Clone this on you Mac
 
-# Testing
-- Open the VCSwiftToolkit.xcworkspace
-- Run the project
-- Have fun :)
-
 # Using it on your project
 - Open the VCSwiftToolkit.xcworkspace
 - Copy the group "Sources" to your project on Xcode

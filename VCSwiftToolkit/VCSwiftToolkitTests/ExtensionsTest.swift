@@ -99,9 +99,9 @@ class ExtensionsTest: XCTestCase {
         
         XCTAssertNotNil(testString.vcDrawImage(font: UIFont.systemFont(ofSize: 10), color: .black, contextSize: CGSize(width: 100, height: 100)))
     }
-    func testLenght() {
-        XCTAssertNotNil("Test".vcLenght)
-        XCTAssertEqual("Test".vcLenght, 4)
+    func testLength() {
+        XCTAssertNotNil("Test".vcLength)
+        XCTAssertEqual("Test".vcLength, 4)
     }
     /** String Tests **/
 }

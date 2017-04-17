@@ -193,14 +193,14 @@ class VCDateHandler {
         return dateFormatter.string(from: date as Date)
     }
     /**
-     * Returns a NSString from a Date for the Current Timezone and specified Format
+     * Returns a String from a Date for the Current Timezone and specified Format
      */
     func stringFromDateForCurrentTimezone(date : Date, dateFormat : DateFormat) -> String {
         
         return self.stringFromDate(date: date, dateFormat: dateFormat, timezoneName: sharedLocaleHelper.currentTimezone().identifier)
     }
     /**
-     * Returns a NSString from a Date for the UTC Timezone and specified Format
+     * Returns a String from a Date for the UTC Timezone and specified Format
      */
     func stringFromDateForUTCTimezone(date : Date, dateFormat : DateFormat) -> String {
         

@@ -35,14 +35,6 @@ class VCSwiftToolkitTests: XCTestCase {
         XCTAssertNotNil(sharedObjectToolkit.getAvailabelLocales(), "Failed getting available Locales")
     }
     
-    func testGetRootNavigationViewFromViewController() {
-        let singleVC = UIViewController()
-        XCTAssertNil(sharedObjectToolkit.getRootNavigationViewFromViewController(viewController: singleVC), "Failed getting view from root navigationcontroller")
-        
-        _ = UINavigationController(rootViewController: singleVC)
-        XCTAssertNotNil(sharedObjectToolkit.getRootNavigationViewFromViewController(viewController: singleVC), "Failed getting view from root navigationcontroller")
-    }
-    
     func testConvertAnyObjectToJSONData() {
         let nsMutableDict = NSMutableDictionary()
         

@@ -217,9 +217,9 @@ extension String {
     }
     
     /**
-     * Returns the String lenght
+     * Returns the String length
      */
-    var vcLenght : Int {
+    var vcLength : Int {
         return self.characters.count
     }
     

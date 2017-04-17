@@ -46,7 +46,7 @@ class VCObjectsToolkit {
     }
     
     /**
-     * Returns all the Locales available
+     * Returns all the Locales available in this device
      */
     func getAvailabelLocales() -> [(identifier : String, name : String)] {
         let identifiers : [String] = NSLocale.availableLocaleIdentifiers
@@ -64,15 +64,7 @@ class VCObjectsToolkit {
     }
     
     /**
-     * Returns the view of the root NavigationController from a specified ViewController
-     */
-    func getRootNavigationViewFromViewController(viewController: UIViewController) -> UIView? {
-        
-        return viewController.navigationController?.view
-    }
-    
-    /**
-     * Performs a block of code on the main thread after a given delay
+     * Performs a block of code async after a given delay
      */
     func performBlockAfterDelay(delay: TimeInterval, block: @escaping () -> Void) {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delay, execute: {

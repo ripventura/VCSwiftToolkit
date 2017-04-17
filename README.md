@@ -10,7 +10,13 @@ For now, here's how to use it:
 
 # Installing
 - Clone this on you Mac
+- Run 'pod install' on the cloned project
 
 # Using it on your project
+- Add the following lines to your project's Podfile:
+
+pod 'QRCode'
+
+- Run 'pod install' on your project
 - Open the VCSwiftToolkit.xcworkspace
 - Copy the group "Sources" to your project on Xcode

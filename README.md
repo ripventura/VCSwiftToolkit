@@ -7,7 +7,7 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+There' no Example project, but you can learn how to use the methods by looking at the Tests section.
 
 ## Requirements
 

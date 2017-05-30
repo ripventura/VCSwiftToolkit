@@ -1,0 +1,27 @@
+{
+  "name": "VCSwiftToolkit",
+  "version": "0.1.0",
+  "summary": "A short description of VCSwiftToolkit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ripventura/VCSwiftToolkit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ripventura": "vitorcesco@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/ripventura/VCSwiftToolkit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "VCSwiftToolkit/Classes/**/*",
+  "dependencies": {
+    "QRCode": [
+      "2.0"
+    ]
+  }
+}

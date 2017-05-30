@@ -1,0 +1,6 @@
+framework module VCSwiftToolkit {
+  umbrella header "VCSwiftToolkit-umbrella.h"
+
+  export *
+  module * { export * }
+}

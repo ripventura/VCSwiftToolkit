@@ -15,6 +15,15 @@ extension Dictionary {
             self.updateValue(value, forKey:key)
         }
     }
+    
+    /** Returns a JSON String (pretty printed) from this Dictionary **/
+    public func vcJSONString(encoding: String.Encoding = String.Encoding.utf8) -> String? {
+        if let data = sharedObjectToolkit.convertAnyObjectToJSONData(object: self as AnyObject) {
+            return String(data: data, encoding: encoding)
+        } else {
+            return nil
+        }
+    }
 }
 
 extension Data {

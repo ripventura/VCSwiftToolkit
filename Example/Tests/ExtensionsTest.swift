@@ -21,6 +21,12 @@ class ExtensionsTest: XCTestCase {
         
         XCTAssertEqual(dict as NSDictionary, ["String":"Test", "Int":Int(123), "Double":Double(123.45)] as NSDictionary)
     }
+    
+    func testJSONStringFromDictionary() {
+        let dict : [String : Any] = ["String":"Test", "Int":Int(123), "dict":["foo":"bar"]]
+        
+        XCTAssertNotNil(dict.vcJSONString())
+    }
     /** Dictionary Tests **/
     
     /** Data Tests **/

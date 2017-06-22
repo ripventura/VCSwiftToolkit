@@ -153,6 +153,16 @@ open class VCDateHandler {
         /** 07:59:59 **/
         case TimeISO = "HH:mm:ss"
         
+        /** 07:59 AM **/
+        case Time12LongAMPMFormat = "hh:mm a"
+        /** 7:59 AM **/
+        case Time12ShortAMPMFormat = "h:mm a"
+        
+        /** 07:59 AM **/
+        case Time24LongAMPMFormat = "HH:mm"
+        /** 7:59 AM **/
+        case Time24ShortAMPMFormat = "H:mm"
+        
         /** 07 **/
         case TimeHour12LongFormat = "hh"
         /** 7 **/
@@ -172,11 +182,6 @@ open class VCDateHandler {
         case TimeSecondsLongFormat = "ss"
         /** 9 **/
         case TimeSecondsShortFormat = "s"
-        
-        /** 07:59 AM **/
-        case Time12LongAMPMFormat = "hh:mm a"
-        /** 7:59 AM **/
-        case Time12ShortAMPMFormat = "h:mm a"
     }
     
     

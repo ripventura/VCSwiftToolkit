@@ -225,11 +225,311 @@ extension String {
         return newImage
     }
     
-    /**
-     * Returns the String length
-     */
-    public var vcLength : Int {
-        return self.characters.count
+    /** Returns a Date from a formatted String for the specified Timezone */
+    public func vcDateWithFormat(dateFormat : String, timezoneName : String) -> Date? {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        dateFormatter.timeZone = TimeZone(identifier: timezoneName)
+        
+        return dateFormatter.date(from: self)
     }
     
+    /** Returns a Date from a formatted String for the current Timezone */
+    public func vcDateWithFormatForCurrentTimezone(dateFormat : String) -> Date? {
+        return self.vcDateWithFormat(dateFormat: dateFormat, timezoneName: sharedLocaleHelper.currentTimezone().identifier)
+    }
+    
+    /** Returns a Date from a String for the UTC Timezone and specified Format */
+    public func vcDateWithFormatForUTCTimezone(dateFormat : String) -> Date? {
+        return self.vcDateWithFormat(dateFormat: dateFormat, timezoneName: sharedLocaleHelper.utcTimezone().identifier)
+    }
+}
+
+extension Date {
+    public enum DateFormat: String {
+        
+        /** 2015-09-06T07:59:59.000Z **/
+        case DateTimeISO8601IN = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        /** 2015-09-06T07:59:59Z **/
+        case DateTimeISO8601OUT = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        
+        /** 2015-09-06 07:59:59 **/
+        case DateTimeISO = "yyyy-MM-dd HH:mm:ss"
+        /** 2015-09-06 07-59-59 **/
+        case DateTimeISODashed = "yyyy-MM-dd HH-mm-ss"
+        /** 09-06-2015 07:59:59 **/
+        case DateTimeISOMonthDayYear = "MM-dd-yyyy HH:mm:ss"
+        /** 06-09-2015 07:59:59 **/
+        case DateTimeISODayMonthYear = "dd-MM-yyyy HH:mm:ss"
+        
+        /** 09/06 07:59 AM **/
+        case DateLongTime12LongAMPMFormat = "MM/dd hh:mm a"
+        /** 9/6 07:59 AM **/
+        case DateShortTime12LongAMPMFormat = "M/d hh:mm a"
+        /** 09/06 7:59 AM **/
+        case DateLongTime12ShortAMPMFormat = "MM/dd h:mm a"
+        /** 9/6 7:59 AM **/
+        case DateShortTime12ShortAMPMFormat = "M/d h:mm a"
+        
+        /** Wed 06, 09:00 AM **/
+        case WeekdayShortDayLongTime12LongAMPMFormat = "EEE dd, hh:mm a"
+        /** Wed 06, 9:00 AM **/
+        case WeekdayShortDayLongTime12ShortAMPMFormat = "EEE dd, h:mm a"
+        /** Wed 6, 09:00 AM **/
+        case WeekdayShortDayShortTime12LongAMPMFormat = "EEE d, hh:mm a"
+        /** Wed 6, 9:00 AM **/
+        case WeekdayShortDayShortTime12ShortAMPMFormat = "EEE d, h:mm a"
+        /** Wednesday 06 **/
+        case WeekdayLongDayLongFormat = "EEEE dd"
+        /** Wednesday 6 **/
+        case WeekdayLongDayShortFormat = "EEEE d"
+        /** Wednesday, 4/6 **/
+        case WeekdayLongDateShortFormat = "EEEE, M/d"
+        /** Wed, 4/6 **/
+        case WeekdayShortDateShortFormat = "EEE, M/d"
+        /** Wed, 06 Apr 2015 **/
+        case WeekdayShortDayShortMonthNameShortYearLongFormat = "EEE, dd MMM yyyy"
+        
+        /** 2015-09-06 **/
+        case DateISO = "yyyy-MM-dd"
+        
+        /** 09/06 **/
+        case DateLongFormat = "MM/dd"
+        /** 9/6 **/
+        case DateShortFormat = "M/d"
+        
+        /** 09 **/
+        case MonthLongFormat = "MM"
+        /** 9 **/
+        case MonthShortFormat = "M"
+        /** September **/
+        case MonthNameLongFormat = "MMMM"
+        /** Sep **/
+        case MonthNameShortFormat = "MMM"
+        
+        /** 2015 **/
+        case YearLongFormat = "yyyy"
+        /** 15 **/
+        case YearShortFormat = "yy"
+        
+        /** 09 **/
+        case DayLongFormat = "dd"
+        /** 9 **/
+        case DayShortFormat = "d"
+        
+        /** Sep 06 **/
+        case MonthNameShortDayLongFormat = "MMM dd"
+        /** Sep 6 **/
+        case MonthNameShortDayShortFormat = "MMM d"
+        
+        /** Sep 6, 2016 **/
+        case MonthNameShortDayShortYearLongFormat = "MMM d, yyyy"
+        
+        /** Sep, 2016 **/
+        case MonthNameShortYearLongFormat = "MMM, yyyy"
+        /** September, 2016 **/
+        case MonthNameLongYearLongFormat = "MMMM, yyyy"
+        
+        /** 07:59:59 **/
+        case TimeISO = "HH:mm:ss"
+        
+        /** 07:59 AM **/
+        case Time12LongAMPMFormat = "hh:mm a"
+        /** 7:59 AM **/
+        case Time12ShortAMPMFormat = "h:mm a"
+        
+        /** 07:59 AM **/
+        case Time24LongAMPMFormat = "HH:mm"
+        /** 7:59 AM **/
+        case Time24ShortAMPMFormat = "H:mm"
+        
+        /** 07 **/
+        case TimeHour12LongFormat = "hh"
+        /** 7 **/
+        case TimeHour12ShortFormat = "h"
+        
+        /** 07 **/
+        case TimeHour24LongFormat = "HH"
+        /** 7 **/
+        case TimeHour24ShortFormat = "H"
+        
+        /** 08 **/
+        case TimeMinuteLongFormat = "mm"
+        /** 8 **/
+        case TimeMinuteShortFormat = "m"
+        
+        /** 09 **/
+        case TimeSecondsLongFormat = "ss"
+        /** 9 **/
+        case TimeSecondsShortFormat = "s"
+    }
+    
+    /** Returns a formatted String with the specified Timezone and Format */
+    public func vcStringWithFormat(dateFormat : String, timezoneName : String) -> String {
+        
+        let dateFormatter = sharedLocaleHelper.localizedDateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        dateFormatter.timeZone = TimeZone(identifier: timezoneName)
+        
+        return dateFormatter.string(from: self)
+    }
+    
+    /** Returns a formatted String for the Current Timezone and specified Format */
+    public func vcStringWithFormatForCurrentTimezone(dateFormat : String) -> String {
+        
+        return self.vcStringWithFormat(dateFormat: dateFormat, timezoneName: sharedLocaleHelper.currentTimezone().identifier)
+    }
+    
+    /** Returns a String from a Date for the UTC Timezone and specified Format */
+    public func vcStringWithFormatForUTCTimezone(dateFormat : String) -> String {
+        
+        return self.vcStringWithFormat(dateFormat: dateFormat, timezoneName: sharedLocaleHelper.utcTimezone().identifier)
+    }
+    
+    /** Returns the readable interval between 2 dates */
+    public func vcReadableIntervalBetweenDates(otherDate: Date) -> String {
+        let interval = self.timeIntervalSince(otherDate)
+        var diff : TimeInterval = interval
+        if diff < 0 {
+            diff *= -1
+        }
+        
+        var string = ""
+        
+        if diff < 59 {
+            string = "less than 1 minute"
+        }
+        else if diff <= 3599 {
+            let minutes = String(format: "%.0f", diff/60)
+            
+            if Int(minutes)! > 1 {
+                string = "about " + minutes + " minutes"
+            }
+            else {
+                string = "about 1 minute"
+            }
+            
+        }
+        else {
+            let hours = String(format: "%.0f", diff/60/60)
+            
+            if Int(hours)! > 1 {
+                string = "about " + hours + " hours"
+            }
+            else {
+                string = "about 1 hour"
+            }
+        }
+        
+        
+        if interval < 0 {
+            return string + " ago"
+        }
+        else {
+            return "in " + string
+        }
+    }
+    
+    /** Sets this Date's Year */
+    public mutating func vcSetYear(year : Int, referenceTimezone : TimeZone = sharedLocaleHelper.currentTimezone()) {
+        
+        var dateString = String(format: "%d", year)
+        dateString = dateString + "-" + self.vcStringWithFormat(dateFormat: Date.DateFormat.MonthLongFormat.rawValue,
+                                                                timezoneName: referenceTimezone.identifier)
+        dateString = dateString + "-" + self.vcStringWithFormat(dateFormat: Date.DateFormat.DayLongFormat.rawValue,
+                                                                timezoneName: referenceTimezone.identifier)
+        dateString = dateString + " " + self.vcStringWithFormat(dateFormat: Date.DateFormat.TimeISO.rawValue,
+                                                                timezoneName: referenceTimezone.identifier)
+        
+        self = dateString.vcDateWithFormat(dateFormat: Date.DateFormat.DateTimeISO.rawValue,
+                                           timezoneName: referenceTimezone.identifier)!
+    }
+    
+    /** Sets this Date's Month */
+    public mutating func vcSetMonth(month : Int, referenceTimezone : TimeZone = sharedLocaleHelper.currentTimezone()) {
+        
+        var dateString = self.vcStringWithFormat(dateFormat: Date.DateFormat.YearLongFormat.rawValue,
+                                                 timezoneName: referenceTimezone.identifier)
+        dateString = dateString + "-" + String(format: "%d", month)
+        dateString = dateString + "-" + self.vcStringWithFormat(dateFormat: Date.DateFormat.DayLongFormat.rawValue,
+                                                                timezoneName: referenceTimezone.identifier)
+        dateString = dateString + " " + self.vcStringWithFormat(dateFormat: Date.DateFormat.TimeISO.rawValue,
+                                                                timezoneName: referenceTimezone.identifier)
+        
+        self = dateString.vcDateWithFormat(dateFormat: Date.DateFormat.DateTimeISO.rawValue,
+                                           timezoneName: referenceTimezone.identifier)!
+    }
+    
+    /** Sets this Date's Day */
+    public mutating func vcSetDay(day : Int, referenceTimezone : TimeZone = sharedLocaleHelper.currentTimezone()) {
+        
+        var dateString = self.vcStringWithFormat(dateFormat: Date.DateFormat.YearLongFormat.rawValue,
+                                                 timezoneName: referenceTimezone.identifier)
+        dateString = dateString + "-" + self.vcStringWithFormat(dateFormat: Date.DateFormat.MonthLongFormat.rawValue,
+                                                                timezoneName: referenceTimezone.identifier)
+        dateString = dateString + "-" + String(format: "%d", day)
+        dateString = dateString + " " + self.vcStringWithFormat(dateFormat: Date.DateFormat.TimeISO.rawValue,
+                                                                timezoneName: referenceTimezone.identifier)
+        
+        self = dateString.vcDateWithFormat(dateFormat: Date.DateFormat.DateTimeISO.rawValue,
+                                           timezoneName: referenceTimezone.identifier)!
+    }
+    
+    /** Sets the Time of the given Date.
+     As all Date objects are UTC when computed, the referenceTimezone is used to compensate the offset on the seconds field */
+    public mutating func vcSetTime(hour : Int, minute : Int, second : Int, referenceTimezone : TimeZone = sharedLocaleHelper.currentTimezone()) {
+        
+        var dateString = self.vcStringWithFormat(dateFormat: Date.DateFormat.DateISO.rawValue, timezoneName: referenceTimezone.identifier)
+        dateString = dateString + " " + String(format: "%d", hour)
+        dateString = dateString + ":" + String(format: "%d", minute)
+        dateString = dateString + ":" + String(format: "%d", second)
+        
+        self = dateString.vcDateWithFormat(dateFormat: Date.DateFormat.DateTimeISO.rawValue,
+                                           timezoneName: referenceTimezone.identifier)!
+    }
+    
+    /** Adds or Removes Hours / Minutes / Seconds */
+    public mutating func vcOperateTime(hour : Int, minute : Int, second : Int) {
+        
+        self = Calendar.current.date(byAdding: Calendar.Component.hour, value: hour, to: self)!
+        self = Calendar.current.date(byAdding: Calendar.Component.minute, value: minute, to: self)!
+        self = Calendar.current.date(byAdding: Calendar.Component.second, value: second, to: self)!
+    }
+    
+    /** Adds or Removes Days */
+    public mutating func vcOperateDays(days : Int) {
+        
+        self = Calendar.current.date(byAdding: Calendar.Component.day, value: days, to: self)!
+    }
+    
+    /** Adds or Removes Weeks */
+    public mutating func vcOperateWeeks(weeks : Int) {
+        
+        self = Calendar.current.date(byAdding: Calendar.Component.weekOfYear, value: weeks, to: self)!
+    }
+    
+    /** Adds or Removes Months */
+    public mutating func vcOperateMonths(months : Int) {
+        
+        self = Calendar.current.date(byAdding: Calendar.Component.month, value: months, to: self)!
+    }
+    
+    /** Adds or Removes Years */
+    public mutating func vcOperateYears(years : Int) {
+        
+        self = Calendar.current.date(byAdding: Calendar.Component.year, value: years, to: self)!
+    }
+    
+    /** True if the given Date is in between the other two Dates.
+     Also lets you choos if equal dates ( >= || <= ) should be considered (default is true). */
+    public func vcIsInBetween(startDate : Date, endDate : Date, includeEquals : Bool = true) -> Bool {
+        
+        if includeEquals {
+            return self.timeIntervalSince(startDate as Date) >= 0 && self.timeIntervalSince(endDate as Date) <= 0
+        }
+        else {
+            return self.timeIntervalSince(startDate as Date) > 0 && self.timeIntervalSince(endDate as Date) < 0
+        }
+    }
 }

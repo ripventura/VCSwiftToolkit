@@ -16,7 +16,7 @@
 		5CA10E0C32963BBCEB3BCF94A172E020 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137560E47541FD91AF14AF155C102715 /* Extensions.swift */; };
 		633E573D4B7ABA55DCBB5DDD75ABFF6F /* CIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25362ACD732E3C59798B8BF36206FA /* CIColorExtension.swift */; };
 		6AB782B09F29FD9F0C7D4C50C2B0F347 /* QRCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D3E6F341A2853DF269981B9937C3DF /* QRCode.framework */; };
-		6BB41F52DA16E90DB701F58877293BA9 /* VCDateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B44A67FAA549433E040A2284579EF7 /* VCDateHandler.swift */; };
+		6BB41F52DA16E90DB701F58877293BA9 /* VCLocaleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B44A67FAA549433E040A2284579EF7 /* VCLocaleHelper.swift */; };
 		6E92CF41925FB4D526796334E433099D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12382F667507BC3799E0D84E765AF112 /* Foundation.framework */; };
 		7289889A8C846BE48C8FAC366BD23044 /* Pods-VCSwiftToolkit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE59BDD3A9EA63573D94D413606BCB94 /* Pods-VCSwiftToolkit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B42AE71BB45B488B9D2B6F1BEEA8E52 /* VCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C80FB124C2247522FED95308B0BFC0C /* VCFileManager.swift */; };
@@ -57,43 +57,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07268F8EBDCC0BCB32054B165E2F1462 /* Pods_VCSwiftToolkit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_VCSwiftToolkit_Tests.framework; path = "Pods-VCSwiftToolkit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07268F8EBDCC0BCB32054B165E2F1462 /* Pods_VCSwiftToolkit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCSwiftToolkit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CAEBFAC0D4A760705B3AEAFACEC729 /* Pods-VCSwiftToolkit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VCSwiftToolkit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		104B11E2B3DC1FE18AD54056E8492E7E /* QRCode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCode-prefix.pch"; sourceTree = "<group>"; };
 		12382F667507BC3799E0D84E765AF112 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		12975775F8BE62AB1516329F8E18FE58 /* Pods-VCSwiftToolkit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-VCSwiftToolkit_Tests.modulemap"; sourceTree = "<group>"; };
+		12975775F8BE62AB1516329F8E18FE58 /* Pods-VCSwiftToolkit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-VCSwiftToolkit_Tests.modulemap"; sourceTree = "<group>"; };
 		137560E47541FD91AF14AF155C102715 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		24BCD24BAB01A2FC44428FEE9D8CB52E /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 		39777CFA4DBBD3BC6ECD179138BF78C9 /* Pods-VCSwiftToolkit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VCSwiftToolkit_Tests-dummy.m"; sourceTree = "<group>"; };
 		3B22CBAEF62D32AA1F53076EB9FF5DCB /* QRCode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRCode-dummy.m"; sourceTree = "<group>"; };
 		40E5C4EA9180F189ACBEE64A36F47937 /* Pods-VCSwiftToolkit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCSwiftToolkit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		45F19D29E25CF0775330D9FF06E739FA /* QRCode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCode.xcconfig; sourceTree = "<group>"; };
-		4B65EDB77B31854F067C439331A46EDD /* VCSwiftToolkit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = VCSwiftToolkit.modulemap; sourceTree = "<group>"; };
+		4B65EDB77B31854F067C439331A46EDD /* VCSwiftToolkit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VCSwiftToolkit.modulemap; sourceTree = "<group>"; };
 		4EA622389C818314E979E4C89B983F52 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F0097B9EB35125DCE94F01ABB9F55E1 /* QRCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCode.swift; path = QRCode/QRCode.swift; sourceTree = "<group>"; };
 		53C5120A17041E04BE6440CF63033BDF /* VCSwiftToolkit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VCSwiftToolkit-umbrella.h"; sourceTree = "<group>"; };
 		5C80FB124C2247522FED95308B0BFC0C /* VCFileManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VCFileManager.swift; sourceTree = "<group>"; };
-		67D9BD815E5EFA62F0D8DB134FDF1253 /* VCSwiftToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VCSwiftToolkit.framework; path = VCSwiftToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67D9BD815E5EFA62F0D8DB134FDF1253 /* VCSwiftToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VCSwiftToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B58E94171A167D32D6A9308E195A4D2 /* QRCode-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCode-umbrella.h"; sourceTree = "<group>"; };
-		70B03346C38CF0F21F4EBA5E78C605A2 /* QRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QRCode.framework; path = QRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70B03346C38CF0F21F4EBA5E78C605A2 /* QRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7822BF40EB004FB95B7F0FEC54A80C5A /* Pods-VCSwiftToolkit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCSwiftToolkit_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		79D0E5E15D4710B89AFBE26FA9449D91 /* Pods-VCSwiftToolkit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCSwiftToolkit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		7AEC73CCD1042FE4A1587ED7F6E183B5 /* QRCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = QRCode.modulemap; sourceTree = "<group>"; };
-		7CDBB95656F9201AAC5946D53211E355 /* Pods-VCSwiftToolkit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-VCSwiftToolkit_Example.modulemap"; sourceTree = "<group>"; };
+		7AEC73CCD1042FE4A1587ED7F6E183B5 /* QRCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = QRCode.modulemap; sourceTree = "<group>"; };
+		7CDBB95656F9201AAC5946D53211E355 /* Pods-VCSwiftToolkit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-VCSwiftToolkit_Example.modulemap"; sourceTree = "<group>"; };
 		84C1DA69283397CBA487877E69E23BE3 /* Pods-VCSwiftToolkit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VCSwiftToolkit_Example-dummy.m"; sourceTree = "<group>"; };
 		892E0B07B56D9F5E030A57701978F669 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89B44A67FAA549433E040A2284579EF7 /* VCDateHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VCDateHandler.swift; sourceTree = "<group>"; };
+		89B44A67FAA549433E040A2284579EF7 /* VCLocaleHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VCLocaleHelper.swift; sourceTree = "<group>"; };
 		8A25362ACD732E3C59798B8BF36206FA /* CIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CIColorExtension.swift; path = QRCode/CIColorExtension.swift; sourceTree = "<group>"; };
 		91B396243BD5BF770F495A3BFC2A8C21 /* Pods-VCSwiftToolkit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCSwiftToolkit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		91FBCA4277FC7D90927BF17DE5761888 /* Pods-VCSwiftToolkit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VCSwiftToolkit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		932E37C641B796A101E20FC38B5116E8 /* VCSwiftToolkit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VCSwiftToolkit-prefix.pch"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EADEAA72A41CEB58C6BC291E6566CD8 /* Pods-VCSwiftToolkit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VCSwiftToolkit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A6D6A02D715FEB886B2DBE50272AA8A2 /* Pods-VCSwiftToolkit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCSwiftToolkit_Example-resources.sh"; sourceTree = "<group>"; };
 		B30D310EADD18C1922E0FDE464ACF503 /* Pods-VCSwiftToolkit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VCSwiftToolkit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B45BE233D6E2AF353B9E2F1793474065 /* Pods-VCSwiftToolkit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCSwiftToolkit_Tests-resources.sh"; sourceTree = "<group>"; };
 		B5E5749DE6036FC4AA47D65DA91E828F /* CIImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CIImageExtension.swift; path = QRCode/CIImageExtension.swift; sourceTree = "<group>"; };
-		B91741DB8EB0CBEDC9DEF5C43B2F1D2A /* TestJSON.json */ = {isa = PBXFileReference; includeInIndex = 1; path = TestJSON.json; sourceTree = "<group>"; };
+		B91741DB8EB0CBEDC9DEF5C43B2F1D2A /* TestJSON.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = TestJSON.json; sourceTree = "<group>"; };
 		B97672C3F247A7439740688C31991BD4 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageViewExtension.swift; path = QRCode/UIImageViewExtension.swift; sourceTree = "<group>"; };
 		C8FCF6A74CAA05B10D3C32245F57514B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE59BDD3A9EA63573D94D413606BCB94 /* Pods-VCSwiftToolkit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VCSwiftToolkit_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		EB105FCA43F9EF72A681A2A828C919C5 /* Pods-VCSwiftToolkit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCSwiftToolkit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		ED6F73A4137BE7A36AE5A7C7C4DB36D8 /* Pods-VCSwiftToolkit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCSwiftToolkit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EF6C4EAD3C48039DF23250BCB13D3EFB /* Pods-VCSwiftToolkit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VCSwiftToolkit_Example-umbrella.h"; sourceTree = "<group>"; };
-		EFC82B0F11D95D3D5179D8063A766DA4 /* Pods_VCSwiftToolkit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_VCSwiftToolkit_Example.framework; path = "Pods-VCSwiftToolkit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC82B0F11D95D3D5179D8063A766DA4 /* Pods_VCSwiftToolkit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCSwiftToolkit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F327591613B51C53CC444555AC4EF9A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3B4C1B29EF37B22AC6B328AB5F57E23 /* VCSwiftToolkit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VCSwiftToolkit-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,7 +169,6 @@
 			children = (
 				7BC70788B2375ED141DBEC7618EC5AB8 /* Classes */,
 			);
-			name = VCSwiftToolkit;
 			path = VCSwiftToolkit;
 			sourceTree = "<group>";
 		};
@@ -220,11 +219,10 @@
 				137560E47541FD91AF14AF155C102715 /* Extensions.swift */,
 				24BCD24BAB01A2FC44428FEE9D8CB52E /* LocalNotificationHelper.swift */,
 				B91741DB8EB0CBEDC9DEF5C43B2F1D2A /* TestJSON.json */,
-				89B44A67FAA549433E040A2284579EF7 /* VCDateHandler.swift */,
+				89B44A67FAA549433E040A2284579EF7 /* VCLocaleHelper.swift */,
 				5C80FB124C2247522FED95308B0BFC0C /* VCFileManager.swift */,
 				DA03A9236B3A0DB2724E3EA42595B4EC /* VCSwiftToolkit.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -302,7 +300,6 @@
 				B97672C3F247A7439740688C31991BD4 /* UIImageViewExtension.swift */,
 				77C492C0279587CF1EE688DA58A76F94 /* Support Files */,
 			);
-			name = QRCode;
 			path = QRCode;
 			sourceTree = "<group>";
 		};
@@ -466,7 +463,7 @@
 				5CA10E0C32963BBCEB3BCF94A172E020 /* Extensions.swift in Sources */,
 				C5CD6EC6B4B260E3A70D5A987DE0A8AD /* LocalNotificationHelper.swift in Sources */,
 				3F42DFA914E2C1A69DFD6CB620F4B635 /* TestJSON.json in Sources */,
-				6BB41F52DA16E90DB701F58877293BA9 /* VCDateHandler.swift in Sources */,
+				6BB41F52DA16E90DB701F58877293BA9 /* VCLocaleHelper.swift in Sources */,
 				7B42AE71BB45B488B9D2B6F1BEEA8E52 /* VCFileManager.swift in Sources */,
 				A4F3B743D61139A27E304F15F86C8A13 /* VCSwiftToolkit-dummy.m in Sources */,
 				CBE3D867F90F74DBE1A74EFAE9094998 /* VCSwiftToolkit.swift in Sources */,

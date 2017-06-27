@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18AC49331F02B04700AF5822 /* TestJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 18AC49321F02B04700AF5822 /* TestJSON.json */; };
+		18AC49341F02B04700AF5822 /* TestJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 18AC49321F02B04700AF5822 /* TestJSON.json */; };
 		18C70CE61EDDF344003ACCB6 /* ExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70CE21EDDF344003ACCB6 /* ExtensionsTest.swift */; };
-		18C70CE71EDDF344003ACCB6 /* VCDateHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70CE31EDDF344003ACCB6 /* VCDateHandlerTests.swift */; };
+		18C70CE71EDDF344003ACCB6 /* VCLocaleHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70CE31EDDF344003ACCB6 /* VCLocaleHelperTests.swift */; };
 		18C70CE81EDDF344003ACCB6 /* VCFileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70CE41EDDF344003ACCB6 /* VCFileManagerTests.swift */; };
 		18C70CE91EDDF344003ACCB6 /* VCSwiftToolkitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70CE51EDDF344003ACCB6 /* VCSwiftToolkitTests.swift */; };
 		428C8B3FC3B2B15DA6C77753 /* Pods_VCSwiftToolkit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8605CDB48CFCC6EE30912E99 /* Pods_VCSwiftToolkit_Example.framework */; };
@@ -32,8 +34,9 @@
 
 /* Begin PBXFileReference section */
 		12335A7E3E593CC17DD18E91 /* Pods-VCSwiftToolkit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCSwiftToolkit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VCSwiftToolkit_Example/Pods-VCSwiftToolkit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		18AC49321F02B04700AF5822 /* TestJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestJSON.json; sourceTree = "<group>"; };
 		18C70CE21EDDF344003ACCB6 /* ExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsTest.swift; sourceTree = "<group>"; };
-		18C70CE31EDDF344003ACCB6 /* VCDateHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCDateHandlerTests.swift; sourceTree = "<group>"; };
+		18C70CE31EDDF344003ACCB6 /* VCLocaleHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCLocaleHelperTests.swift; sourceTree = "<group>"; };
 		18C70CE41EDDF344003ACCB6 /* VCFileManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCFileManagerTests.swift; sourceTree = "<group>"; };
 		18C70CE51EDDF344003ACCB6 /* VCSwiftToolkitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCSwiftToolkitTests.swift; sourceTree = "<group>"; };
 		1BF5278FF64D6CB9A3B19726 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -122,6 +125,7 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18AC49321F02B04700AF5822 /* TestJSON.json */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -131,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				18C70CE21EDDF344003ACCB6 /* ExtensionsTest.swift */,
-				18C70CE31EDDF344003ACCB6 /* VCDateHandlerTests.swift */,
+				18C70CE31EDDF344003ACCB6 /* VCLocaleHelperTests.swift */,
 				18C70CE41EDDF344003ACCB6 /* VCFileManagerTests.swift */,
 				18C70CE51EDDF344003ACCB6 /* VCSwiftToolkitTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
@@ -260,6 +264,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				18AC49331F02B04700AF5822 /* TestJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18AC49341F02B04700AF5822 /* TestJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18C70CE71EDDF344003ACCB6 /* VCDateHandlerTests.swift in Sources */,
+				18C70CE71EDDF344003ACCB6 /* VCLocaleHelperTests.swift in Sources */,
 				18C70CE81EDDF344003ACCB6 /* VCFileManagerTests.swift in Sources */,
 				18C70CE91EDDF344003ACCB6 /* VCSwiftToolkitTests.swift in Sources */,
 				18C70CE61EDDF344003ACCB6 /* ExtensionsTest.swift in Sources */,
@@ -548,6 +554,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VCSwiftToolkit_Example.app/VCSwiftToolkit_Example";
 			};
 			name = Debug;
 		};
@@ -564,6 +571,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VCSwiftToolkit_Example.app/VCSwiftToolkit_Example";
 			};
 			name = Release;
 		};

@@ -16,14 +16,14 @@ class VCFileManagerTests: XCTestCase {
         super.setUp()
         
         // Creates the Test Directory
-        _ = sharedFileManager.createFolderInDirectory(directory: sharedFileManager.directoryLibrary, folderName: testDirName)
+        _ = VCFileManager.createFolderInDirectory(directory: VCFileManager.Directory.library, folderName: testDirName)
     }
     
     override func tearDown() {
         super.tearDown()
         
         // Removes the Test Directory
-        _ = sharedFileManager.deleteDirectory(name: testDirName, directoryPath: sharedFileManager.directoryLibrary)
+        _ = VCFileManager.deleteDirectory(directory: .library, customFolder: testDirName)
     }
     
     func testStringReadWrite() {
@@ -31,11 +31,11 @@ class VCFileManagerTests: XCTestCase {
         let fileExtension = "txt"
         let fileContent = "Testing string 1234"
         
-        XCTAssertNil(sharedFileManager.readString(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName), "Failed to read String from test directory")
+        XCTAssertNil(VCFileManager.readString(fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName), "Failed to read String from test directory")
         
-        sharedFileManager.writeString(string: fileContent, fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName, replaceExisting: true)
+        VCFileManager.writeString(string: fileContent, fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName, replaceExisting: true)
         
-        XCTAssertEqual(sharedFileManager.readString(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName), fileContent, "Failed to read String from test directory")
+        XCTAssertEqual(VCFileManager.readString(fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName), fileContent, "Failed to read String from test directory")
     }
     
     func testDictionaryReadWrite() {
@@ -48,12 +48,12 @@ class VCFileManagerTests: XCTestCase {
         fileContent["Double"] = Double(123.45)
         fileContent["Dict"] = ["Dict" : ["Array" : ["Test", 123]]]
         
-        XCTAssertNil(sharedFileManager.readDictionary(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName), "Failed to read Dictionary from test directory")
+        XCTAssertNil(VCFileManager.readDictionary(fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName), "Failed to read Dictionary from test directory")
         
-        sharedFileManager.writeDictionary(dictionary: fileContent as NSDictionary, fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName, replaceExisting: true)
+        VCFileManager.writeDictionary(dictionary: fileContent as NSDictionary, fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName, replaceExisting: true)
         
         XCTAssertEqual(
-            sharedFileManager.readDictionary(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName),
+            VCFileManager.readDictionary(fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName),
             fileContent as NSDictionary,
             "Failed to read Dictionary from test directory")
     }
@@ -68,12 +68,12 @@ class VCFileManagerTests: XCTestCase {
         fileContent.append(Double(123.45))
         fileContent.append(["Dict" : ["Array" : ["Test", 123]]])
         
-        XCTAssertNil(sharedFileManager.readDictionary(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName), "Failed to read Array from test directory")
+        XCTAssertNil(VCFileManager.readDictionary(fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName), "Failed to read Array from test directory")
         
-        sharedFileManager.writeArray(array: fileContent as NSArray, fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName, replaceExisting: true)
+        VCFileManager.writeArray(array: fileContent as NSArray, fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName, replaceExisting: true)
         
         XCTAssertEqual(
-            sharedFileManager.readArray(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName),
+            VCFileManager.readArray(fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName),
             fileContent as NSArray,
             "Failed to read Array from test directory")
     }
@@ -84,12 +84,12 @@ class VCFileManagerTests: XCTestCase {
         
         var fileContent : UIImage = UIImage(named: "TestJPGImage")!
         
-        XCTAssertNil(sharedFileManager.readImage(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName), "Failed to read Image from test directory")
+        XCTAssertNil(VCFileManager.readImage(fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName), "Failed to read Image from test directory")
         
-        sharedFileManager.writeImage(image: fileContent, imageFormat: VCFileManager.ImageFormat(rawValue: fileExtension)!, fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName, replaceExisting: true)
+        VCFileManager.writeImage(image: fileContent, imageFormat: VCFileManager.ImageFormat(rawValue: fileExtension)!, fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName, replaceExisting: true)
         
         XCTAssertNotNil(
-            sharedFileManager.readImage(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName),
+            VCFileManager.readImage(fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName),
             "Failed to read Image from test directory")
         
         
@@ -97,12 +97,12 @@ class VCFileManagerTests: XCTestCase {
         
         fileContent = UIImage(named: "TestPNGImage")!
         
-        XCTAssertNil(sharedFileManager.readImage(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName), "Failed to read Image from test directory")
+        XCTAssertNil(VCFileManager.readImage(fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName), "Failed to read Image from test directory")
         
-        sharedFileManager.writeImage(image: fileContent, imageFormat: VCFileManager.ImageFormat(rawValue: fileExtension)!, fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName, replaceExisting: true)
+        VCFileManager.writeImage(image: fileContent, imageFormat: VCFileManager.ImageFormat(rawValue: fileExtension)!, fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName, replaceExisting: true)
         
         XCTAssertNotNil(
-            sharedFileManager.readImage(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName),
+            VCFileManager.readImage(fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName),
             "Failed to read Image from test directory")
     }
     
@@ -110,26 +110,26 @@ class VCFileManagerTests: XCTestCase {
         let fileName = "TestJSON"
         let fileExtension = "json"
         
-        XCTAssertNotNil(sharedFileManager.readJSON(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryBundle!, customFolder: nil))
+        XCTAssertNotNil(VCFileManager.readJSON(fileName: fileName, fileExtension: fileExtension, directory: .bundle, customFolder: nil))
     }
     
     func testDirectoryCreationAndDeletion() {
         let tempFolderName = "TempDir"
         
         // Confirms the Directory doesn't exists
-        XCTAssertFalse(sharedFileManager.deleteDirectory(name: tempFolderName, directoryPath: sharedFileManager.directoryLibrary).success)
+        XCTAssertFalse(VCFileManager.deleteDirectory(directory: .library, customFolder: tempFolderName).success)
         
         // Creates the Directory
-        XCTAssertTrue(sharedFileManager.createFolderInDirectory(directory: sharedFileManager.directoryLibrary, folderName: tempFolderName).success)
+        XCTAssertTrue(VCFileManager.createFolderInDirectory(directory: VCFileManager.Directory.library, folderName: tempFolderName).success)
         
         // Confirms the Directory exists
-        XCTAssertFalse(sharedFileManager.createFolderInDirectory(directory: sharedFileManager.directoryLibrary, folderName: tempFolderName).success)
+        XCTAssertFalse(VCFileManager.createFolderInDirectory(directory: VCFileManager.Directory.library, folderName: tempFolderName).success)
         
         // Removes the Directory
-        XCTAssertTrue(sharedFileManager.deleteDirectory(name: tempFolderName, directoryPath: sharedFileManager.directoryLibrary).success)
+        XCTAssertTrue(VCFileManager.deleteDirectory(directory: .library, customFolder: tempFolderName).success)
         
         // Confirms the Directory doesn't exists
-        XCTAssertFalse(sharedFileManager.deleteDirectory(name: tempFolderName, directoryPath: sharedFileManager.directoryLibrary).success)
+        XCTAssertFalse(VCFileManager.deleteDirectory(directory: .library, customFolder: tempFolderName).success)
         
     }
     
@@ -138,9 +138,9 @@ class VCFileManagerTests: XCTestCase {
         let fileExtension = "txt"
         let fileContent = "Testing string 1234"
         
-        sharedFileManager.writeString(string: fileContent, fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName, replaceExisting: true)
+        VCFileManager.writeString(string: fileContent, fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName, replaceExisting: true)
         
-        XCTAssertNotNil(sharedFileManager.creationDateForFileNamed(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: testDirName))
+        XCTAssertNotNil(VCFileManager.creationDateForFileNamed(fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: testDirName))
     }
     
     func testMoveFile() {
@@ -148,16 +148,16 @@ class VCFileManagerTests: XCTestCase {
         let tempFolderName2 = testDirName+"/TempDir2"
         
         // Creates the First Directory
-        XCTAssertTrue(sharedFileManager.createFolderInDirectory(directory: sharedFileManager.directoryLibrary, folderName: tempFolderName1).success)
+        XCTAssertTrue(VCFileManager.createFolderInDirectory(directory: VCFileManager.Directory.library, folderName: tempFolderName1).success)
         
         // Creates the Second Directory
-        XCTAssertTrue(sharedFileManager.createFolderInDirectory(directory: sharedFileManager.directoryLibrary, folderName: tempFolderName2).success)
+        XCTAssertTrue(VCFileManager.createFolderInDirectory(directory: VCFileManager.Directory.library, folderName: tempFolderName2).success)
         
         // Verifies the First Directory content
-        XCTAssertEqual(sharedFileManager.listFilesInDirectory(directory: sharedFileManager.directoryLibrary, customFolder: tempFolderName1).count, 0)
+        XCTAssertEqual(VCFileManager.listFilesInDirectory(directory: VCFileManager.Directory.library, customFolder: tempFolderName1).count, 0)
         
         // Verifies the Second Directory content
-        XCTAssertEqual(sharedFileManager.listFilesInDirectory(directory: sharedFileManager.directoryLibrary, customFolder: tempFolderName2).count, 0)
+        XCTAssertEqual(VCFileManager.listFilesInDirectory(directory: VCFileManager.Directory.library, customFolder: tempFolderName2).count, 0)
         
         
         let fileName = "TestStringFile"
@@ -165,55 +165,55 @@ class VCFileManagerTests: XCTestCase {
         let fileContent = "Testing string 1234"
         
         // Creates the file on the First Directory
-        sharedFileManager.writeString(string: fileContent, fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: tempFolderName1, replaceExisting: true)
+        VCFileManager.writeString(string: fileContent, fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: tempFolderName1, replaceExisting: true)
         
         
         // Verifies the First Directory content
-        XCTAssertEqual(sharedFileManager.listFilesInDirectory(directory: sharedFileManager.directoryLibrary, customFolder: tempFolderName1).count, 1)
+        XCTAssertEqual(VCFileManager.listFilesInDirectory(directory: VCFileManager.Directory.library, customFolder: tempFolderName1).count, 1)
         
         // Verifies the Second Directory content
-        XCTAssertEqual(sharedFileManager.listFilesInDirectory(directory: sharedFileManager.directoryLibrary, customFolder: tempFolderName2).count, 0)
+        XCTAssertEqual(VCFileManager.listFilesInDirectory(directory: VCFileManager.Directory.library, customFolder: tempFolderName2).count, 0)
         
         // Moves the file to the Second Directory
-        sharedFileManager.moveFileNamed(fileName: fileName, fileExtension: fileExtension, fromDirectory: sharedFileManager.directoryLibrary, fromCustomFolder: tempFolderName1, toDirectory: sharedFileManager.directoryLibrary, toCustomFolder: tempFolderName2)
+        VCFileManager.moveFileNamed(fileName: fileName, fileExtension: fileExtension, fromDirectory: VCFileManager.Directory.library, fromCustomFolder: tempFolderName1, toDirectory: VCFileManager.Directory.library, toCustomFolder: tempFolderName2)
         
         // Verifies the First Directory content
-        XCTAssertEqual(sharedFileManager.listFilesInDirectory(directory: sharedFileManager.directoryLibrary, customFolder: tempFolderName1).count, 0)
+        XCTAssertEqual(VCFileManager.listFilesInDirectory(directory: VCFileManager.Directory.library, customFolder: tempFolderName1).count, 0)
         
         // Verifies the Second Directory content
-        XCTAssertEqual(sharedFileManager.listFilesInDirectory(directory: sharedFileManager.directoryLibrary, customFolder: tempFolderName2).count, 1)
+        XCTAssertEqual(VCFileManager.listFilesInDirectory(directory: VCFileManager.Directory.library, customFolder: tempFolderName2).count, 1)
         
         // Reads the file content on the Second Directory
-        XCTAssertEqual(sharedFileManager.readString(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: tempFolderName2), fileContent)
+        XCTAssertEqual(VCFileManager.readString(fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: tempFolderName2), fileContent)
     }
     
     func testDeleteAllFilesInDirectory() {
         let tempFolderName1 = testDirName+"/TempDir1"
         
         // Creates the First Directory
-        XCTAssertTrue(sharedFileManager.createFolderInDirectory(directory: sharedFileManager.directoryLibrary, folderName: tempFolderName1).success)
+        XCTAssertTrue(VCFileManager.createFolderInDirectory(directory: VCFileManager.Directory.library, folderName: tempFolderName1).success)
         
         // Verifies the First Directory content
-        XCTAssertEqual(sharedFileManager.listFilesInDirectory(directory: sharedFileManager.directoryLibrary, customFolder: tempFolderName1).count, 0)
+        XCTAssertEqual(VCFileManager.listFilesInDirectory(directory: VCFileManager.Directory.library, customFolder: tempFolderName1).count, 0)
         
         let fileName = "TestStringFile"
         let fileExtension = "txt"
         let fileContent = "Testing string 1234"
         
         // Creates the file on the First Directory
-        sharedFileManager.writeString(string: fileContent, fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryLibrary, customFolder: tempFolderName1, replaceExisting: true)
+        VCFileManager.writeString(string: fileContent, fileName: fileName, fileExtension: fileExtension, directory: VCFileManager.Directory.library, customFolder: tempFolderName1, replaceExisting: true)
         
         // Verifies the First Directory content
-        XCTAssertEqual(sharedFileManager.listFilesInDirectory(directory: sharedFileManager.directoryLibrary, customFolder: tempFolderName1).count, 1)
+        XCTAssertEqual(VCFileManager.listFilesInDirectory(directory: VCFileManager.Directory.library, customFolder: tempFolderName1).count, 1)
         
         // Delete all files on the First Directory
-        XCTAssertTrue(sharedFileManager.deleteAllFilesInDirectory(directory: sharedFileManager.directoryLibrary, customFolder: tempFolderName1).success)
+        XCTAssertTrue(VCFileManager.deleteAllFilesInDirectory(directory: VCFileManager.Directory.library, customFolder: tempFolderName1).success)
         
         // Verifies the First Directory content
-        XCTAssertEqual(sharedFileManager.listFilesInDirectory(directory: sharedFileManager.directoryLibrary, customFolder: tempFolderName1).count, 0)
+        XCTAssertEqual(VCFileManager.listFilesInDirectory(directory: VCFileManager.Directory.library, customFolder: tempFolderName1).count, 0)
         
         // Verifies the First Directory still exists
-        XCTAssertFalse(sharedFileManager.createFolderInDirectory(directory: sharedFileManager.directoryLibrary, folderName: tempFolderName1).success)
+        XCTAssertFalse(VCFileManager.createFolderInDirectory(directory: VCFileManager.Directory.library, folderName: tempFolderName1).success)
         
     }
     

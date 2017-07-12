@@ -8,8 +8,6 @@
 
 import UIKit
 
-public let sharedFileManager : VCFileManager = VCFileManager()
-
 open class VCOperationResult {
     public let success : Bool
     public let error : NSError?
@@ -26,14 +24,31 @@ open class VCFileManager {
         case PNG = "PNG"
         case JPG = "JPG"
     }
-    open let directoryLibrary = NSHomeDirectory().appending("/Library")
-    open let directoryDocuments = NSHomeDirectory().appending("/Documents")
-    open let directoryBundle = Bundle.main.resourcePath
     
-    /**
-     * Writes a NSDictionary to the specified directory
-     */
-    open func writeDictionary(dictionary : NSDictionary, fileName : String, fileExtension : String, directory : String, customFolder : String?, replaceExisting : Bool) {
+    public enum Directory: String {
+        case library, documents, bundle
+        
+        public var rawValue: String {
+            get {
+                switch self {
+                case .library:
+                    return NSHomeDirectory().appending("/Library")
+                case .documents:
+                    return NSHomeDirectory().appending("/Documents")
+                case .bundle:
+                    return Bundle.main.resourcePath!
+                }
+            }
+        }
+    }
+    
+    /** Writes a NSDictionary to the specified directory. */
+    open static func writeDictionary(dictionary : NSDictionary,
+                                     fileName : String,
+                                     fileExtension : String,
+                                     directory : Directory,
+                                     customFolder : String?,
+                                     replaceExisting : Bool) {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
@@ -50,10 +65,13 @@ open class VCFileManager {
         }
     }
     
-    /**
-     * Writes a String to the specified directory
-     */
-    open func writeString(string : String, fileName : String, fileExtension : String, directory : String, customFolder : String?, replaceExisting : Bool) {
+    /** Writes a String to the specified directory. */
+    open static func writeString(string : String,
+                                 fileName : String,
+                                 fileExtension : String,
+                                 directory : Directory,
+                                 customFolder : String?,
+                                 replaceExisting : Bool) {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
@@ -88,10 +106,13 @@ open class VCFileManager {
         }
     }
     
-    /**
-     * Writes a NSArray to the specified directory
-     */
-    open func writeArray(array : NSArray, fileName : String, fileExtension : String, directory : String, customFolder : String?, replaceExisting : Bool) {
+    /**  Writes a NSArray to the specified directory. */
+    open static func writeArray(array : NSArray,
+                                fileName : String,
+                                fileExtension : String,
+                                directory : Directory,
+                                customFolder : String?,
+                                replaceExisting : Bool) {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
@@ -110,10 +131,14 @@ open class VCFileManager {
         }
     }
     
-    /**
-     * Writes a UIImage to the specified directory. Supports only PNG and JPG files.
-     */
-    open func writeImage(image : UIImage, imageFormat : ImageFormat, fileName : String, fileExtension : String, directory : String, customFolder : String?, replaceExisting : Bool) {
+    /** Writes a UIImage to the specified directory. Supports only PNG and JPG files. */
+    open static func writeImage(image : UIImage,
+                                imageFormat : ImageFormat,
+                                fileName : String,
+                                fileExtension : String,
+                                directory : Directory,
+                                customFolder : String?,
+                                replaceExisting : Bool) {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
@@ -149,30 +174,33 @@ open class VCFileManager {
     }
     
     
-    /**
-     * Reads a NSDictionary from the specified directory
-     */
-    open func readDictionary(fileName : String, fileExtension : String, directory : String, customFolder : String?) -> NSDictionary? {
+    /** Reads a NSDictionary from the specified directory. */
+    open static func readDictionary(fileName : String,
+                                    fileExtension : String,
+                                    directory : Directory,
+                                    customFolder : String?) -> NSDictionary? {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
         return NSDictionary(contentsOfFile: filePath)
     }
     
-    /**
-     * Reads a NSArray from the specified directory
-     */
-    open func readArray(fileName : String, fileExtension : String, directory : String, customFolder : String?) -> NSArray? {
+    /** Reads a NSArray from the specified directory. */
+    open static func readArray(fileName : String,
+                               fileExtension : String,
+                               directory : Directory,
+                               customFolder : String?) -> NSArray? {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
         return NSArray(contentsOfFile: filePath)
     }
     
-    /**
-     * Reads a String from the specified directory
-     */
-    open func readString(fileName : String, fileExtension : String, directory : String, customFolder : String?) -> String? {
+    /** Reads a String from the specified directory. */
+    open static func readString(fileName : String,
+                                fileExtension : String,
+                                directory : Directory,
+                                customFolder : String?) -> String? {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
@@ -186,10 +214,11 @@ open class VCFileManager {
         }
     }
     
-    /**
-     * Reads a UIImage from the specified directory
-     */
-    open func readImage(fileName : String, fileExtension : String, directory : String, customFolder : String?) -> UIImage? {
+    /** Reads a UIImage from the specified directory. */
+    open static func readImage(fileName : String,
+                               fileExtension : String,
+                               directory : Directory,
+                               customFolder : String?) -> UIImage? {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
@@ -202,10 +231,11 @@ open class VCFileManager {
         return nil
     }
     
-    /**
-     * Reads a JSON Any from the specified directory
-     */
-    open func readJSON(fileName : String, fileExtension : String, directory : String, customFolder : String?) -> Any? {
+    /** Reads a JSON Any from the specified directory. */
+    open static func readJSON(fileName : String,
+                              fileExtension : String,
+                              directory : Directory,
+                              customFolder : String?) -> Any? {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
@@ -221,10 +251,11 @@ open class VCFileManager {
     
     
     
-    /**
-     * Deletes the specified File from the specified directory
-     */
-    open func deleteFile(fileName : String, fileExtension : String, directory : String, customFolder : String?) -> VCOperationResult {
+    /** Deletes the specified File from the specified directory. */
+    open static func deleteFile(fileName : String,
+                                fileExtension : String,
+                                directory : Directory,
+                                customFolder : String?) -> VCOperationResult {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
@@ -237,15 +268,14 @@ open class VCFileManager {
         }
     }
     
-    /**
-     * Deletes the specified directory
-     */
-    open func deleteDirectory(name : String, directoryPath : String) -> VCOperationResult {
+    /** Deletes the specified directory. */
+    open static func deleteDirectory(directory : Directory,
+                                     customFolder : String) -> VCOperationResult {
         
-        let filePath = directoryPath.appending("/"+name)
+        let folderPath = self.path(directory: directory, customFolder: customFolder)
 
         do {
-            try FileManager.default.removeItem(atPath: filePath)
+            try FileManager.default.removeItem(atPath: folderPath)
             return VCOperationResult(success: true, error: nil)
         }
         catch let error as NSError {
@@ -253,12 +283,11 @@ open class VCFileManager {
         }
     }
     
-    /**
-     * Deletes All Files from the specified directory
-     */
-    open func deleteAllFilesInDirectory(directory : String, customFolder : String) -> VCOperationResult {
+    /** Deletes All Files from the specified directory. */
+    open static func deleteAllFilesInDirectory(directory : Directory,
+                                               customFolder : String) -> VCOperationResult {
         
-        let folderPath = self.pathWithMainDirectory(directory: directory, customFolder: customFolder)
+        let folderPath = self.path(directory: directory, customFolder: customFolder)
         
         do {
             if FileManager.default.fileExists(atPath: folderPath) {
@@ -275,12 +304,11 @@ open class VCFileManager {
     }
     
     
-    /**
-     * Creates a Folder in the specified directory (does not override an existing folder with the same name on the same path)
-     */
-    open func createFolderInDirectory(directory : String, folderName : String) -> VCOperationResult {
+    /** Creates a Folder in the specified directory (does not override an existing folder with the same name on the same path). */
+    open static func createFolderInDirectory(directory : Directory,
+                                             folderName : String) -> VCOperationResult {
         
-        let folderPath = self.pathWithMainDirectory(directory: directory, customFolder: folderName)
+        let folderPath = self.path(directory: directory, customFolder: folderName)
         
         do {
             try FileManager.default.createDirectory(atPath: folderPath, withIntermediateDirectories: false, attributes: nil)
@@ -292,14 +320,13 @@ open class VCFileManager {
         }
     }
     
-    /**
-     * Lists All Files within the specified directory
-     */
-    open func listFilesInDirectory(directory : String, customFolder : String?) -> NSArray {
+    /** Lists All Files within the specified directory. */
+    open static func listFilesInDirectory(directory : Directory,
+                                          customFolder : String?) -> NSArray {
         
         let fileManager = FileManager.default
         
-        let folderPath = self.pathWithMainDirectory(directory: directory, customFolder: customFolder)
+        let folderPath = self.path(directory: directory, customFolder: customFolder)
         print(folderPath)
         do {
             let contents = try fileManager.contentsOfDirectory(atPath: folderPath)
@@ -311,10 +338,13 @@ open class VCFileManager {
         }
     }
     
-    /**
-     * Moves the specified File from the original directory to a new directory
-     */
-    open func moveFileNamed(fileName : String, fileExtension : String, fromDirectory : String, fromCustomFolder : String?, toDirectory : String, toCustomFolder : String?) {
+    /** Moves the specified File from the original directory to a new directory. */
+    open static func moveFileNamed(fileName : String,
+                                   fileExtension : String,
+                                   fromDirectory : Directory,
+                                   fromCustomFolder : String?,
+                                   toDirectory : Directory,
+                                   toCustomFolder : String?) {
         
         let fromPath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: fromDirectory, customFolder: fromCustomFolder)
         
@@ -331,10 +361,11 @@ open class VCFileManager {
         
     }
     
-    /**
-     * Returns the Creation Date for the specified file
-     */
-    open func creationDateForFileNamed(fileName : String, fileExtension : String, directory : String, customFolder : String?) -> Date? {
+    /** Returns the Creation Date for the specified file. */
+    open static func creationDateForFileNamed(fileName : String,
+                                              fileExtension : String,
+                                              directory : Directory,
+                                              customFolder : String?) -> Date? {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
@@ -356,7 +387,8 @@ open class VCFileManager {
     }
     
     
-    private func getDictionariesFromFiles(directory : String, customFolder : String?) -> NSArray {
+    private static func getDictionariesFromFiles(directory : Directory,
+                                                 customFolder : String?) -> NSArray {
         
         let fileList = self.listFilesInDirectory(directory: directory, customFolder: customFolder)
         
@@ -371,9 +403,12 @@ open class VCFileManager {
         
     }
     
-    private func pathForFile(fileName : String, fileExtension : String, directory : String, customFolder : String?) -> String {
+    private static func pathForFile(fileName : String,
+                                    fileExtension : String,
+                                    directory : Directory,
+                                    customFolder : String?) -> String {
         
-        var filePath = directory
+        var filePath = directory.rawValue
         
         if customFolder != nil {
             filePath = filePath.appending("/"+customFolder!)
@@ -388,9 +423,10 @@ open class VCFileManager {
         return filePath
     }
     
-    private func pathWithMainDirectory(directory : String, customFolder : String?) -> String {
+    private static func path(directory : Directory,
+                                              customFolder : String?) -> String {
         
-        var filePath = directory
+        var filePath = directory.rawValue
         
         if customFolder != nil {
             filePath = filePath.appending("/"+customFolder!)

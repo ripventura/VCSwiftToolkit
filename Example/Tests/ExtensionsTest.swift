@@ -35,7 +35,7 @@ class ExtensionsTest: XCTestCase {
         let fileName = "TestJSON"
         let fileExtension = "json"
         
-        XCTAssertNotNil(sharedFileManager.readJSON(fileName: fileName, fileExtension: fileExtension, directory: sharedFileManager.directoryBundle!, customFolder: nil))
+        XCTAssertNotNil(VCFileManager.readJSON(fileName: fileName, fileExtension: fileExtension, directory: .bundle, customFolder: nil))
     }
     /** Data Tests **/
     
@@ -111,6 +111,9 @@ class ExtensionsTest: XCTestCase {
         XCTAssertEqual(testDate.vcStringWithFormatForCurrentTimezone(dateFormat: Date.DateFormat.DateTimeISO.rawValue), "2015-09-06 04:59:59")
         XCTAssertEqual(testDate.vcStringWithFormatForUTCTimezone(dateFormat: Date.DateFormat.DateTimeISO.rawValue), testString)
         XCTAssertEqual(testDate.vcStringWithFormat(dateFormat: Date.DateFormat.DateTimeISO.rawValue, timezoneName: testTimezone), "2015-09-06 03:59:59")
+    }
+    func testQRCodeImage() {
+        XCTAssertNotNil("Test String".vcQRCode(size: CGSize(width: 100, height: 100)))
     }
     /** String Tests **/
     

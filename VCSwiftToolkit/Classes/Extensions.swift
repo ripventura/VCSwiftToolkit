@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QRCode
 
 extension Dictionary {
     /** Appends another dictionary into this one **/
@@ -18,7 +19,7 @@ extension Dictionary {
     
     /** Returns a JSON String (pretty printed) from this Dictionary **/
     public func vcJSONString(encoding: String.Encoding = String.Encoding.utf8) -> String? {
-        if let data = sharedObjectToolkit.convertAnyObjectToJSONData(object: self as AnyObject) {
+        if let data = VCToolkit.anyObjectToJSONData(object: self as AnyObject) {
             return String(data: data, encoding: encoding)
         } else {
             return nil
@@ -170,6 +171,19 @@ extension UIImage {
     }
 }
 
+extension UIColor {
+    /** Returns the CIColor equivalent of this UIColor */
+    var vcCIColor: CIColor {
+        return CIColor(color: self)
+    }
+    
+    /** Returns the RGB Components of this UIColor */
+    var vcRGBComponents: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        let color = self.vcCIColor
+        return (color.red, color.green, color.blue, color.alpha)
+    }
+}
+
 extension String {
     /**
      *  Converts a String to base64 String
@@ -196,6 +210,18 @@ extension String {
         let data = Data(base64Encoded: self, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)
         
         return UIImage(data: data! as Data)
+    }
+    
+    /**
+     * Returns a QRCode image from a String, with the given Size and Color
+     */
+    public func vcQRCode(size: CGSize, color: UIColor = .black, backgroundColor: UIColor = .white) -> UIImage? {
+        var qrCode = QRCode(self)
+        qrCode?.size = size
+        qrCode?.color = color.vcCIColor
+        qrCode?.backgroundColor = backgroundColor.vcCIColor
+        
+        return qrCode?.image
     }
     
     /**

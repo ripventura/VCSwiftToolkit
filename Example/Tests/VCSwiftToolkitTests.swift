@@ -28,51 +28,47 @@ class VCSwiftToolkitTests: XCTestCase {
     }
     
     func testGetAllAvailableFonts() {
-        XCTAssertNotNil(sharedObjectToolkit.getAvailableFonts(), "Failed getting all available Fonts")
+        XCTAssertNotNil(VCToolkit.getAvailableFonts(), "Failed getting all available Fonts")
     }
     
     func testGetAvailableLocales() {
-        XCTAssertNotNil(sharedObjectToolkit.getAvailabelLocales(), "Failed getting available Locales")
+        XCTAssertNotNil(VCToolkit.getAvailabelLocales(), "Failed getting available Locales")
     }
     
-    func testConvertAnyObjectToJSONData() {
+    func testanyObjectToJSONData() {
         let nsMutableDict = NSMutableDictionary()
         
-        XCTAssertNotNil(sharedObjectToolkit.convertAnyObjectToJSONData(object: nsMutableDict as AnyObject), "Failed converting empty NSMutableDictionary to JSON Data")
+        XCTAssertNotNil(VCToolkit.anyObjectToJSONData(object: nsMutableDict as AnyObject), "Failed converting empty NSMutableDictionary to JSON Data")
         
         nsMutableDict.setObject("Test", forKey: "String" as NSCopying)
         nsMutableDict.setObject(Int(123), forKey: "Int" as NSCopying)
         nsMutableDict.setObject(Double(123.45), forKey: "Double" as NSCopying)
         
-        XCTAssertNotNil(sharedObjectToolkit.convertAnyObjectToJSONData(object: nsMutableDict), "Failed converting NSMutableDictionary to JSON Data")
+        XCTAssertNotNil(VCToolkit.anyObjectToJSONData(object: nsMutableDict), "Failed converting NSMutableDictionary to JSON Data")
         
         
         var dict : [String : Any] = [:]
         
-        XCTAssertNotNil(sharedObjectToolkit.convertAnyObjectToJSONData(object: dict as AnyObject), "Failed converting empty Dictionary to JSON Data")
+        XCTAssertNotNil(VCToolkit.anyObjectToJSONData(object: dict as AnyObject), "Failed converting empty Dictionary to JSON Data")
         
         dict["String"] = "Test"
         dict["Int"] = Int(123)
         dict["Double"] = Double(123.45)
         dict["Dict"] = ["Dict" : ["Array" : ["Test", 123]]]
         
-        XCTAssertNotNil(sharedObjectToolkit.convertAnyObjectToJSONData(object: dict as AnyObject), "Failed converting Dictionary to JSON Data")
+        XCTAssertNotNil(VCToolkit.anyObjectToJSONData(object: dict as AnyObject), "Failed converting Dictionary to JSON Data")
         
         
         var array : [Any] = []
         
-        XCTAssertNotNil(sharedObjectToolkit.convertAnyObjectToJSONData(object: array as AnyObject), "Failed converting empty Array to JSON Data")
+        XCTAssertNotNil(VCToolkit.anyObjectToJSONData(object: array as AnyObject), "Failed converting empty Array to JSON Data")
         
         array.append("Test")
         array.append(Int(123))
         array.append(Double(123.45))
         array.append(["Dict" : ["Array" : ["Test", 123]]])
         
-        XCTAssertNotNil(sharedObjectToolkit.convertAnyObjectToJSONData(object: array as AnyObject), "Failed converting Array to JSON Data")
+        XCTAssertNotNil(VCToolkit.anyObjectToJSONData(object: array as AnyObject), "Failed converting Array to JSON Data")
         
-    }
-    
-    func testQRCodeImage() {
-        XCTAssertNotNil(sharedObjectToolkit.qrCode(fromString: "Test String", withSize: CGSize(width: 100, height: 100)))
     }
 }

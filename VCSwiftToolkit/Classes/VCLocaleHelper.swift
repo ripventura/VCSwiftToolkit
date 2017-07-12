@@ -10,10 +10,9 @@ import Foundation
 
 public let sharedLocaleHelper : VCLocaleHelper = VCLocaleHelper()
 
-
 open class VCLocaleHelper {
-    /** Timezone used on all Date operations by VCDateHandler.
-      * Change this if your application needs to operate in a custom Timezone.  **/
+    /** Timezone used on all Date operations by this Framework.
+     Change this if your application needs to operate in a custom Timezone. */
     private var applicationTimezone : TimeZone
     
     public init() {
@@ -47,9 +46,7 @@ open class VCLocaleHelper {
         return TimeZone(abbreviation: "UTC")!
     }
     
-    /**
-     * Returns a DateFormatter object, formatted to the device preferred language, rather than the standard Region Format
-     */
+    /** Returns a DateFormatter object, formatted to the device preferred language, rather than the standard Region Format. */
     open func localizedDateFormatter() -> DateFormatter {
         
         let deviceLanguageArray : NSArray = NSLocale.preferredLanguages as NSArray

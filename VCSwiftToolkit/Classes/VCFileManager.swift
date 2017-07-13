@@ -48,21 +48,35 @@ open class VCFileManager {
                                      fileExtension : String,
                                      directory : Directory,
                                      customFolder : String?,
-                                     replaceExisting : Bool) {
+                                     replaceExisting : Bool) -> VCOperationResult {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
         if replaceExisting {
-            dictionary.write(toFile: filePath, atomically: true)
+            return VCOperationResult(success: dictionary.write(toFile: filePath, atomically: true), error: nil)
         }
         else {
             if ( self.readDictionary(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)  != nil) {
-                dictionary.write(toFile: filePath.replacingOccurrences(of: ".", with: " copy."), atomically: true)
+                return VCOperationResult(success: dictionary.write(toFile: filePath.replacingOccurrences(of: ".", with: " copy."), atomically: true), error: nil)
             }
             else {
-                dictionary.write(toFile: filePath, atomically: true)
+                return VCOperationResult(success: dictionary.write(toFile: filePath, atomically: true), error: nil)
             }
         }
+    }
+    
+    /** Writes a JSON [String:Any] to the specified directory. */
+    open static func writeJSON(json : [String:Any],
+                               fileName : String,
+                               fileExtension : String,
+                               directory : Directory,
+                               customFolder : String?,
+                               replaceExisting : Bool) -> VCOperationResult {
+        if let jsonString = json.vcJSONString() {
+            return self.writeString(string: jsonString, fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder, replaceExisting: replaceExisting)
+        }
+        
+        return VCOperationResult(success: false, error: nil)
     }
     
     /** Writes a String to the specified directory. */
@@ -71,7 +85,7 @@ open class VCFileManager {
                                  fileExtension : String,
                                  directory : Directory,
                                  customFolder : String?,
-                                 replaceExisting : Bool) {
+                                 replaceExisting : Bool) -> VCOperationResult {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
@@ -80,8 +94,8 @@ open class VCFileManager {
             do {
                 try string.write(toFile: filePath, atomically: true, encoding: String.Encoding.utf8)
             }
-            catch {
-                
+            catch let error as NSError {
+                return VCOperationResult(success: false, error: error)
             }
             
         }
@@ -91,19 +105,21 @@ open class VCFileManager {
                 do {
                     try string.write(toFile: filePath.replacingOccurrences(of: ".", with: " copy."), atomically: true, encoding: String.Encoding.utf8)
                 }
-                catch {
-                    
+                catch let error as NSError {
+                    return VCOperationResult(success: false, error: error)
                 }
             }
             else {
                 do {
                     try string.write(toFile: filePath, atomically: true, encoding: String.Encoding.utf8)
                 }
-                catch {
-                    
+                catch let error as NSError {
+                    return VCOperationResult(success: false, error: error)
                 }
             }
         }
+        
+        return VCOperationResult(success: true, error: nil)
     }
     
     /**  Writes a NSArray to the specified directory. */
@@ -112,21 +128,19 @@ open class VCFileManager {
                                 fileExtension : String,
                                 directory : Directory,
                                 customFolder : String?,
-                                replaceExisting : Bool) {
+                                replaceExisting : Bool) -> VCOperationResult {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
         if replaceExisting {
-            
-            array.write(toFile: filePath, atomically: true)
+            return VCOperationResult(success: array.write(toFile: filePath, atomically: true), error: nil)
         }
         else {
             if (self.readArray(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder) != nil) {
-                
-                array.write(toFile: filePath.replacingOccurrences(of: ".", with: " copy."), atomically: true)
+                return VCOperationResult(success: array.write(toFile: filePath.replacingOccurrences(of: ".", with: " copy."), atomically: true), error: nil)
             }
             else {
-                array.write(toFile: filePath, atomically: true)
+                return VCOperationResult(success: array.write(toFile: filePath, atomically: true), error: nil)
             }
         }
     }
@@ -138,7 +152,7 @@ open class VCFileManager {
                                 fileExtension : String,
                                 directory : Directory,
                                 customFolder : String?,
-                                replaceExisting : Bool) {
+                                replaceExisting : Bool) -> VCOperationResult {
         
         let filePath = self.pathForFile(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder)
         
@@ -151,26 +165,30 @@ open class VCFileManager {
             
             do {
                 try imageData?.write(to: URL(fileURLWithPath: filePath), options: .atomic)
-            } catch {
-                print(error)
+            }
+            catch let error as NSError {
+                return VCOperationResult(success: false, error: error)
             }
         }
         else {
             if (self.readImage(fileName: fileName, fileExtension: fileExtension, directory: directory, customFolder: customFolder) != nil) {
                 do {
                     try imageData?.write(to: URL(fileURLWithPath: filePath.replacingOccurrences(of: ".", with: " copy.")), options: .atomic)
-                } catch {
-                    print(error)
+                }
+                catch let error as NSError {
+                    return VCOperationResult(success: false, error: error)
                 }
             }
             else {
                 do {
                     try imageData?.write(to: URL(fileURLWithPath: filePath), options: .atomic)
-                } catch {
-                    print(error)
+                }
+                catch let error as NSError {
+                    return VCOperationResult(success: false, error: error)
                 }
             }
         }
+        return VCOperationResult(success: true, error: nil)
     }
     
     
@@ -273,7 +291,7 @@ open class VCFileManager {
                                      customFolder : String) -> VCOperationResult {
         
         let folderPath = self.path(directory: directory, customFolder: customFolder)
-
+        
         do {
             try FileManager.default.removeItem(atPath: folderPath)
             return VCOperationResult(success: true, error: nil)
@@ -424,7 +442,7 @@ open class VCFileManager {
     }
     
     private static func path(directory : Directory,
-                                              customFolder : String?) -> String {
+                             customFolder : String?) -> String {
         
         var filePath = directory.rawValue
         

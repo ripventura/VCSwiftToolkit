@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VCSwiftToolkit'
-  s.version          = '0.0.6'
+  s.version          = '0.0.10'
   s.summary          = 'Collection of useful classes for iOS development written in Swift 3'
 
 # This description is used to generate tags and improve search results.

@@ -234,8 +234,8 @@ extension String {
         
         //Sets up the font attributes that will be later used to dictate how the text should be drawn
         let textFontAttributes = [
-            NSFontAttributeName: font,
-            NSForegroundColorAttributeName: color,
+            NSAttributedStringKey.font: font,
+            NSAttributedStringKey.foregroundColor: color,
             ]
         
         //Now Draw the text into an image

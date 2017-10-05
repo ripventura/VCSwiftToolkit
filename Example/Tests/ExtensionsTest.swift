@@ -253,5 +253,17 @@ class ExtensionsTest: XCTestCase {
         XCTAssertFalse(testDate.vcIsInBetween(startDate: pastDate, endDate: futureDate, includeEquals: true))
         XCTAssertFalse(testDate.vcIsInBetween(startDate: pastDate, endDate: futureDate, includeEquals: false))
     }
+    
+    func testReadableIntervalBetweenDates() {
+        let now = Date()
+        var past = now
+        past.vcOperateDays(days: -2)
+        var future = now
+        future.vcOperateDays(days: 2)
+        
+        XCTAssertNotNil(now.vcReadableIntervalBetweenDates(otherDate: past))
+        XCTAssertNotNil(now.vcReadableIntervalBetweenDates(otherDate: future))
+    }
+    
     /** Date Tests **/
 }

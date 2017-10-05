@@ -1,6 +1,6 @@
 {
   "name": "VCSwiftToolkit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "Collection of useful classes for iOS development written in Swift 3",
   "description": "This is a collection of classes and extensions written in Swift 3 to help you optimize your time when developing iOS applications. All the code was done by me, so please if you think you can contribute, lets share some thoughts!\n\nFor Documentation please head to Wiki: https://github.com/ripventura/VCSwiftToolkit/wiki",
   "homepage": "https://github.com/ripventura/VCSwiftToolkit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/ripventura/VCSwiftToolkit.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "8.0"

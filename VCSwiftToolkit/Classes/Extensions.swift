@@ -419,7 +419,9 @@ extension Date {
     }
     
     /** Returns the readable interval between 2 dates */
-    public func vcReadableIntervalBetweenDates(otherDate: Date) -> String {
+    public func vcReadableIntervalBetweenDates(otherDate: Date,
+                                               locale: ReadableIntervalLocaleProtocol = EnUSReadableIntervalLocale(),
+                                               includeAddon: Bool = true) -> String {
         let interval = self.timeIntervalSince(otherDate)
         var diff : TimeInterval = interval
         if diff < 0 {
@@ -428,38 +430,55 @@ extension Date {
         
         var string = ""
         
+        // Less than 1 minute (still seconds)
         if diff < 59 {
-            string = "less than 1 minute"
+            string = locale.justNow
         }
+        // Less than 1 hour (still minutes)
         else if diff <= 3599 {
             let minutes = String(format: "%.0f", diff/60)
             
             if Int(minutes)! > 1 {
-                string = "about " + minutes + " minutes"
+                string = locale.about + " " + minutes + " " + locale.minutes
             }
             else {
-                string = "about 1 minute"
+                string = locale.about + " 1 " + locale.minute
             }
             
         }
-        else {
+        // Less than 1 day (still hours)
+        else if diff <= 86399 {
             let hours = String(format: "%.0f", diff/60/60)
             
             if Int(hours)! > 1 {
-                string = "about " + hours + " hours"
+                string = locale.about + " " + hours + " " + locale.hours
             }
             else {
-                string = "about 1 hour"
+                string = locale.about + " 1 " + locale.hour
+            }
+        }
+        // Days
+        else {
+            let days = String(format: "%.0f", diff/60/60/24)
+            
+            if Int(days)! > 1 {
+                string = locale.about + " " + days + " " + locale.days
+            }
+            else {
+                string = locale.about + " 1 " + locale.day
             }
         }
         
+        if includeAddon {
+            if interval < 0 {
+                string = string + " " + locale.pastAddon
+            }
+            else {
+                string =  locale.futureAddon + " " + string
+            }
+        }
         
-        if interval < 0 {
-            return string + " ago"
-        }
-        else {
-            return "in " + string
-        }
+        return string
     }
     
     /** Sets this Date's Year */

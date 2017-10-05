@@ -432,7 +432,7 @@ extension Date {
         
         // Less than 1 minute (still seconds)
         if diff < 59 {
-            string = locale.justNow
+            return locale.justNow
         }
         // Less than 1 hour (still minutes)
         else if diff <= 3599 {

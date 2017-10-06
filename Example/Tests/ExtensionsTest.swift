@@ -75,6 +75,15 @@ class ExtensionsTest: XCTestCase {
     /** String Tests **/
     let testString : String = "2015-09-06 07:59:59"
     
+    func testContainsStrings() {
+        let testString = "Test"
+        
+        XCTAssertTrue(testString.vcContains(otherString: "test"))
+        XCTAssertTrue(testString.vcContains(otherString: "tesT"))
+        XCTAssertTrue(testString.vcContains(otherString: "Test"))
+        XCTAssertTrue(testString.vcContains(otherString: "tést"))
+        XCTAssertFalse(testString.vcContains(otherString: "test."))
+    }
     func testBase64String() {
         let testString = "Test"
         XCTAssertNotNil(testString)

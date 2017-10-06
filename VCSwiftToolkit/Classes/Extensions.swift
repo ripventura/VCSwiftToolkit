@@ -185,6 +185,11 @@ extension UIColor {
 }
 
 extension String {
+    /** Returns whether this String contains antoher String, with options CaseInsensitve and DiacriticOption */
+    public func vcContains(otherString: String) -> Bool {
+        return self.lowercased().range(of: otherString.lowercased(), options: String.CompareOptions.diacriticInsensitive) != nil
+    }
+    
     /**
      *  Converts a String to base64 String
      */

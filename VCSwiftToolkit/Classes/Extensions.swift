@@ -378,7 +378,7 @@ extension Date {
         /** 07:59 */
         case Time24LongFormat = "HH:mm"
         /** 7:59 */
-        case Time24ShortFormat = "H:m"
+        case Time24ShortFormat = "H:mm"
         
         /** 07 */
         case TimeHour12LongFormat = "hh"
@@ -392,13 +392,9 @@ extension Date {
         
         /** 08 */
         case TimeMinuteLongFormat = "mm"
-        /** 8 */
-        case TimeMinuteShortFormat = "m"
         
         /** 09 */
         case TimeSecondsLongFormat = "ss"
-        /** 9 */
-        case TimeSecondsShortFormat = "s"
     }
     
     /** Returns a formatted String with the specified Timezone and Format */

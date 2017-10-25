@@ -1,6 +1,6 @@
 PODS:
   - QRCode (2.0)
-  - VCSwiftToolkit (0.1.6):
+  - VCSwiftToolkit (0.1.7):
     - QRCode (= 2.0)
 
 DEPENDENCIES:
@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
-  VCSwiftToolkit: 7088094fd0e69b91890231aa555e9bd380b7d4b0
+  VCSwiftToolkit: 394f01549f8fb864084d8248082466ba32bfd919
 
 PODFILE CHECKSUM: 918cf11ccc3f4d0e87a92115f8e93f404afafddd
 

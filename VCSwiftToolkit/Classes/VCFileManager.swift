@@ -434,7 +434,7 @@ open class VCFileManager {
         
         filePath = filePath.appending("/"+fileName)
         
-        if fileExtension.characters.count > 0 {
+        if fileExtension.count > 0 {
             filePath = filePath.appending("."+fileExtension)
         }
         

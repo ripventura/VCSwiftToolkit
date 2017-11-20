@@ -303,6 +303,15 @@ extension Date {
         /** 9/6 7:59 AM */
         case DateShortTime12ShortAMPMFormat = "M/d h:mm a"
         
+        /** 09/06 07:59 */
+        case DateLongTime24LongFormat = "MM/dd HH:mm"
+        /** 9/6 07:59 */
+        case DateShortTime24LongFormat = "M/d HH:mm"
+        /** 09/06 7:59 */
+        case DateLongTime24ShortFormat = "MM/dd H:mm"
+        /** 9/6 7:59 */
+        case DateShortTime24ShortFormat = "M/d H:mm"
+        
         /** Wed 06, 09:00 AM */
         case WeekdayShortDayLongTime12LongAMPMFormat = "EEE dd, hh:mm a"
         /** Wed 06, 9:00 AM */

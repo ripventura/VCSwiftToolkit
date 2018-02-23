@@ -7,132 +7,177 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		086EA6B8B91999022FACE29C10C1B42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12382F667507BC3799E0D84E765AF112 /* Foundation.framework */; };
-		2673A9CF15C784C269F025B047F4C92C /* ReadableIntervalLocaleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA8A13F072338C41CBEBC944A162DC2 /* ReadableIntervalLocaleProtocol.swift */; };
-		312E3BA94B5F0E58B5983A378692A2DB /* VCSwiftToolkit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD136B64A1C795305CD908F851AEB539 /* VCSwiftToolkit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		36184301B1ED1FED6F6A6FDDFE9021F0 /* QRCode-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B58E94171A167D32D6A9308E195A4D2 /* QRCode-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		370E1432AD7127B7C8435D45D71E9610 /* VCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74285530949ABD0A8AD55A0FCB20403B /* VCFileManager.swift */; };
-		3DE0410A7A7F89FE3A0BA775390EC82A /* Pods-VCSwiftToolkit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C1DA69283397CBA487877E69E23BE3 /* Pods-VCSwiftToolkit_Example-dummy.m */; };
-		512048249082F8FB0BEB77A4B442D68B /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A044B1DF4F7AC78853CDA949DF3BBA /* LocalNotificationHelper.swift */; };
-		5ACFC1395A627E63E035D1461CE299C5 /* Pods-VCSwiftToolkit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39777CFA4DBBD3BC6ECD179138BF78C9 /* Pods-VCSwiftToolkit_Tests-dummy.m */; };
-		633E573D4B7ABA55DCBB5DDD75ABFF6F /* CIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25362ACD732E3C59798B8BF36206FA /* CIColorExtension.swift */; };
-		6AB782B09F29FD9F0C7D4C50C2B0F347 /* QRCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D3E6F341A2853DF269981B9937C3DF /* QRCode.framework */; };
-		6E92CF41925FB4D526796334E433099D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12382F667507BC3799E0D84E765AF112 /* Foundation.framework */; };
-		7289889A8C846BE48C8FAC366BD23044 /* Pods-VCSwiftToolkit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE59BDD3A9EA63573D94D413606BCB94 /* Pods-VCSwiftToolkit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D0184C441D7B5AD3EA3917FAE07195B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12382F667507BC3799E0D84E765AF112 /* Foundation.framework */; };
-		82618203C5559C5D6633F5204684B8FE /* QRCode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B22CBAEF62D32AA1F53076EB9FF5DCB /* QRCode-dummy.m */; };
-		8806E19A7E7C7DC80E86B081CE2F9B63 /* VCSwiftToolkit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0681D753D9D76BEA17EA8652E221192F /* VCSwiftToolkit-dummy.m */; };
-		A287208B3A722EB8BB3618E6558356AD /* VCLocaleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C148BED221EBDDE8E5F8A8454BA32B5 /* VCLocaleHelper.swift */; };
-		B8B6300E7B5B43BEF253B8D0C0928EFA /* TestJSON.json in Sources */ = {isa = PBXBuildFile; fileRef = C46C3809EBAAB5D0679349424E8F0789 /* TestJSON.json */; };
-		B9FCAD0A71627002B0AEF727B7C18992 /* VCToolkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2611B93C8918D80D63589A3C85239A34 /* VCToolkit.swift */; };
-		C1FDCE036EF5A5C4735304E9C62D9BB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12382F667507BC3799E0D84E765AF112 /* Foundation.framework */; };
-		C41240B46556EAC26C673642036CF6C2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABA6BD71CA7CE22891C42DF3DB1C096 /* Extensions.swift */; };
-		D0C48AF5DE99910A602503B0B06F7A0B /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0097B9EB35125DCE94F01ABB9F55E1 /* QRCode.swift */; };
-		D1F02CE7F36D0F2E0983A870571707D0 /* CIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5749DE6036FC4AA47D65DA91E828F /* CIImageExtension.swift */; };
-		F218C7980ECD4842783D6DA6F6429C06 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97672C3F247A7439740688C31991BD4 /* UIImageViewExtension.swift */; };
-		F2696F2F67F5D309B7B02BFFB0B79624 /* Pods-VCSwiftToolkit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF6C4EAD3C48039DF23250BCB13D3EFB /* Pods-VCSwiftToolkit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02DB26737D2752363C21906E161C956C /* NSImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09A52B142B82BE89DDB7C92C29D3092 /* NSImage+.swift */; };
+		081C420FDF6F1FAC3258E88D98D09D8E /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BC5F679B32B240199AC06181D7AE62 /* LocalNotificationHelper.swift */; };
+		086EA6B8B91999022FACE29C10C1B42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D598F566C27516F7C15EDD5C5364D4 /* Foundation.framework */; };
+		0890570AD86BABD3C2D04D8C4EC19D1F /* CIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA79A23C23F5FCD818DB04C9709865B /* CIImage+.swift */; };
+		11425EC33E971CBE266534C4428376DD /* QRMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DB6FB6D6C01CEC16AB15BAD23D985A /* QRMath.swift */; };
+		1F336301C76AA0F85EA1D8C8B48F5A84 /* QRRSBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9364DD71955E675B6DF7E39A23B810B /* QRRSBlock.swift */; };
+		2B076A089F85E56A5570A5B795526121 /* BCHUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C24F31A3698DD58FDBF0E5D09BE4 /* BCHUtil.swift */; };
+		2D1A68D7BCFD4BB064DBB53E37DF0A0E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1621F2D9B374101B597A2CCD3393E8E9 /* ImageIO.framework */; };
+		2EE252D8DD813C583DAB7C961565B578 /* ReadableIntervalLocaleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6717216EA02B56F14879311327C6EFDC /* ReadableIntervalLocaleProtocol.swift */; };
+		2F6EC132B78C4B9E5CB481B002CE9902 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D598F566C27516F7C15EDD5C5364D4 /* Foundation.framework */; };
+		2F771072EB5C389801D404C79BB1BAC4 /* CGImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6E38D36D236DC5C32E76D0B7E1045D /* CGImage+.swift */; };
+		30F7E13D81F2160EDD9DEE7414D05FB3 /* EFQRCode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A6258CC977638CEE69D53A3CF9CF6F /* EFQRCode-dummy.m */; };
+		32DA36852D31D1D0565D4A27732144ED /* EFQRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FDED18696D5F94D3F41F4459786080 /* EFQRCodeGenerator.swift */; };
+		34C530F2979ABA951B812D7E018604A6 /* CGSize+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759D64B69BF40EAB2184331533F029CC /* CGSize+.swift */; };
+		36EBD3037E154ED5212ADA79E8642834 /* QRMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE81D613D37FEC8DBB0787BF7192A7 /* QRMode.swift */; };
+		428BA69C0318558EF096C333907BA57E /* CIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8228299724FEFBB37AE016C96AF789 /* CIColor+.swift */; };
+		45A08273B6ED76F8B2024D48558746EC /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE561D866D67046A3AC6367299B966B /* UIColor+.swift */; };
+		48D5C99F50D0762934D7D6BF71043A5B /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6876921A5FFEF499BC1FBEC19E5BF21D /* UIImage+.swift */; };
+		4C480BB8A110F7DFBCD633AF2C4A3035 /* Pods-VCSwiftToolkit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4168287B4D70006FB34E86F39BC6780 /* Pods-VCSwiftToolkit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52B4CD05C5CCD795CB745B0DF94B7BAC /* Pods-VCSwiftToolkit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F51C0F2CDF8E2DAE875AE62B1DF27E /* Pods-VCSwiftToolkit_Example-dummy.m */; };
+		52C55DFE41FF4EA7B7F7E333E7E8F223 /* EFQRCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B58A53F904607ABD723521B78E977AA /* EFQRCode.framework */; };
+		54086570B22DCE160DB8967D60EC7CA7 /* QRErrorCorrectLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648BAFD7086154F586C6EC1A5A4D7409 /* QRErrorCorrectLevel.swift */; };
+		54845305AFC7FAB05183449ECD759B5F /* Failed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945BD676A286A2C941FBC5BA69936F9 /* Failed.swift */; };
+		5ACFC1395A627E63E035D1461CE299C5 /* Pods-VCSwiftToolkit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 111343C1DBBF6855304A7363C4AD6839 /* Pods-VCSwiftToolkit_Tests-dummy.m */; };
+		679F314CD3B1A190740971BA908D0905 /* QRPolynomial.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7424ABE293E98A4AEFDFF780BB58154 /* QRPolynomial.swift */; };
+		6BCEA8F406E37F3EC01F5AEC43E8A655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D598F566C27516F7C15EDD5C5364D4 /* Foundation.framework */; };
+		6CC564EF9382870D2B71F282CEBC2935 /* VCToolkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3452DA7EA4CD9D5BC75F6829540818 /* VCToolkit.swift */; };
+		6F0871BC069849E3D21DCA9D3185419D /* EFQRCode+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4543B669D57A34310195FE9ABC2D1 /* EFQRCode+GIF.swift */; };
+		71C2031BF5815121B614C4AAABDA35C2 /* EFQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C90AA996C75320F04023B7E4CCBD3AE /* EFQRCode.swift */; };
+		7289889A8C846BE48C8FAC366BD23044 /* Pods-VCSwiftToolkit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C9B62D4E85464A09C8D19BB774EF3C /* Pods-VCSwiftToolkit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FAA101B2230FC21FEF7F5B1A40935A2 /* VCLocaleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE08D45F85745FBF08DF54FD2964C7 /* VCLocaleHelper.swift */; };
+		82A5AA21186E5607F7032365649BDB64 /* QRPatternLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B27F943056D0943CD131FF6D30AB3BA /* QRPatternLocator.swift */; };
+		85058B4CD7F82A7815083C973FECBC3E /* TestJSON.json in Sources */ = {isa = PBXBuildFile; fileRef = AE93CD29E69D0F7A6651813AC59DB86C /* TestJSON.json */; };
+		8F42BC9541EBECD5582A28D6E9BADA48 /* QRCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4845E7C0313A5AE370EE31526F2B0F10 /* QRCodeModel.swift */; };
+		A1AD79BBA3DFDD7607A7B700BA212288 /* VCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F14234A975C1194FF1DC810A157BF0 /* VCFileManager.swift */; };
+		A2691E50707AF7D8588DC6C4A6239ADF /* VCSwiftToolkit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 122BD8AC99D9FA304141AB281903A5E7 /* VCSwiftToolkit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB228D554DFDC29081A5A66E6EAADBA /* QRCodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0757BB26CC55AE0BEDAB5466451796EA /* QRCodeType.swift */; };
+		BA2042BB80BB376701940E5A59875731 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D598F566C27516F7C15EDD5C5364D4 /* Foundation.framework */; };
+		BD390767F5239B9B17334324EA63C255 /* QRMaskPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169BBCFEC9D8CF7111A55E53B5381F99 /* QRMaskPattern.swift */; };
+		D01D5C8E378E24CC8EB51F76119BECBA /* QR8bitByte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902A352BBA8F40B76C8C13321A6F034C /* QR8bitByte.swift */; };
+		D14D0F66201765BCB0D23E615330A622 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E492CDB09D7A607549BDDD3D7C95A /* Extensions.swift */; };
+		D2B95505099AAD250D902C7547ACCF37 /* CGColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BED6090CB6CFFEA182AAB66FA97E0C /* CGColor+.swift */; };
+		D6277B603FC3E67E93E098D7FEAE213C /* EFQRCode-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 69B2E9BCB83C4D7D659E331254B83628 /* EFQRCode-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB59E0C0077A6A4089CB19D4484CBABE /* EFQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 13ABABC01C126BCDD4218EDE74551123 /* EFQRCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD881DC541BC2497BC2058CACA044B79 /* EFQRCodeRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8A9A143FED86622E31D38EA8B2DAC0 /* EFQRCodeRecognizer.swift */; };
+		DF29D8CFC3C0F66644604E1A1312A993 /* VCSwiftToolkit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 335C5A0B028666F0E3858F63DB2CD605 /* VCSwiftToolkit-dummy.m */; };
+		E20AA62B11DEDEF6CA57FEAF89D51FE5 /* NSColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9E191BFDD395DC7E3FACDF2C0B283 /* NSColor+.swift */; };
+		E69E2563B76BA36756D2D22D392116C0 /* QRBitBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EA3E09332A8171EFC37E19899B205 /* QRBitBuffer.swift */; };
+		FE48EA24B762F3B17CB86C370ECC3E3D /* EFDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7DAC89FD7917778DE80AB55D4533C8 /* EFDefine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		17D5F8AE791804AAC9C22B1CD92386ED /* PBXContainerItemProxy */ = {
+		047179D2366B76837DC5084051C66D16 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 518ED4FCDA31D01A0AA6CA65FA4904B3;
-			remoteInfo = QRCode;
+			remoteGlobalIDString = 8C13583B2E487345A7AA13B732D3D2E2;
+			remoteInfo = EFQRCode;
 		};
-		50F3198A1E3706EEB5A938B94777CAA4 /* PBXContainerItemProxy */ = {
+		0E89970C980EC0BFBB1A2BB68A43ED0A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C7574C84E28B543B38DDDE9F993E4601;
+			remoteGlobalIDString = 8C13583B2E487345A7AA13B732D3D2E2;
+			remoteInfo = EFQRCode;
+		};
+		106F6F17412C084D7CDF865EB803D0F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8ADECB1B7423F5E924EB04579C3F1D5;
 			remoteInfo = VCSwiftToolkit;
-		};
-		ADBE788BE97D300662AB42F09CAEFA73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 518ED4FCDA31D01A0AA6CA65FA4904B3;
-			remoteInfo = QRCode;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0681D753D9D76BEA17EA8652E221192F /* VCSwiftToolkit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VCSwiftToolkit-dummy.m"; sourceTree = "<group>"; };
-		07268F8EBDCC0BCB32054B165E2F1462 /* Pods_VCSwiftToolkit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_VCSwiftToolkit_Tests.framework; path = "Pods-VCSwiftToolkit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		08CAEBFAC0D4A760705B3AEAFACEC729 /* Pods-VCSwiftToolkit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VCSwiftToolkit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		104B11E2B3DC1FE18AD54056E8492E7E /* QRCode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCode-prefix.pch"; sourceTree = "<group>"; };
-		12382F667507BC3799E0D84E765AF112 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		12975775F8BE62AB1516329F8E18FE58 /* Pods-VCSwiftToolkit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-VCSwiftToolkit_Tests.modulemap"; sourceTree = "<group>"; };
-		1C37924E26E4CD9011A254136AEC573E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2611B93C8918D80D63589A3C85239A34 /* VCToolkit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VCToolkit.swift; path = VCSwiftToolkit/Classes/VCToolkit.swift; sourceTree = "<group>"; };
-		369CC0BCA04DA6D9ABBBAE98B24EA65C /* VCSwiftToolkit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VCSwiftToolkit.xcconfig; sourceTree = "<group>"; };
-		39777CFA4DBBD3BC6ECD179138BF78C9 /* Pods-VCSwiftToolkit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VCSwiftToolkit_Tests-dummy.m"; sourceTree = "<group>"; };
-		3B22CBAEF62D32AA1F53076EB9FF5DCB /* QRCode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRCode-dummy.m"; sourceTree = "<group>"; };
-		3C148BED221EBDDE8E5F8A8454BA32B5 /* VCLocaleHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VCLocaleHelper.swift; path = VCSwiftToolkit/Classes/VCLocaleHelper.swift; sourceTree = "<group>"; };
-		40E5C4EA9180F189ACBEE64A36F47937 /* Pods-VCSwiftToolkit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCSwiftToolkit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		45F19D29E25CF0775330D9FF06E739FA /* QRCode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCode.xcconfig; sourceTree = "<group>"; };
-		4F0097B9EB35125DCE94F01ABB9F55E1 /* QRCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCode.swift; path = QRCode/QRCode.swift; sourceTree = "<group>"; };
-		67D9BD815E5EFA62F0D8DB134FDF1253 /* VCSwiftToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VCSwiftToolkit.framework; path = VCSwiftToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B58E94171A167D32D6A9308E195A4D2 /* QRCode-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCode-umbrella.h"; sourceTree = "<group>"; };
-		70B03346C38CF0F21F4EBA5E78C605A2 /* QRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QRCode.framework; path = QRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		71D5F89139CA40637D5B129A5F83A8C6 /* VCSwiftToolkit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VCSwiftToolkit-prefix.pch"; sourceTree = "<group>"; };
-		74285530949ABD0A8AD55A0FCB20403B /* VCFileManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VCFileManager.swift; path = VCSwiftToolkit/Classes/VCFileManager.swift; sourceTree = "<group>"; };
-		7822BF40EB004FB95B7F0FEC54A80C5A /* Pods-VCSwiftToolkit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCSwiftToolkit_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		79D0E5E15D4710B89AFBE26FA9449D91 /* Pods-VCSwiftToolkit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCSwiftToolkit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		7ABA6BD71CA7CE22891C42DF3DB1C096 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = VCSwiftToolkit/Classes/Extensions.swift; sourceTree = "<group>"; };
-		7AEC73CCD1042FE4A1587ED7F6E183B5 /* QRCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = QRCode.modulemap; sourceTree = "<group>"; };
-		7CDBB95656F9201AAC5946D53211E355 /* Pods-VCSwiftToolkit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-VCSwiftToolkit_Example.modulemap"; sourceTree = "<group>"; };
-		84C1DA69283397CBA487877E69E23BE3 /* Pods-VCSwiftToolkit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VCSwiftToolkit_Example-dummy.m"; sourceTree = "<group>"; };
-		892E0B07B56D9F5E030A57701978F669 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A25362ACD732E3C59798B8BF36206FA /* CIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CIColorExtension.swift; path = QRCode/CIColorExtension.swift; sourceTree = "<group>"; };
-		91B396243BD5BF770F495A3BFC2A8C21 /* Pods-VCSwiftToolkit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCSwiftToolkit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		91FBCA4277FC7D90927BF17DE5761888 /* Pods-VCSwiftToolkit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VCSwiftToolkit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		0757BB26CC55AE0BEDAB5466451796EA /* QRCodeType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeType.swift; path = Source/QRCodeType.swift; sourceTree = "<group>"; };
+		110CE91F0247E921677AC5A21BF01F3C /* EFQRCode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFQRCode.xcconfig; sourceTree = "<group>"; };
+		111343C1DBBF6855304A7363C4AD6839 /* Pods-VCSwiftToolkit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VCSwiftToolkit_Tests-dummy.m"; sourceTree = "<group>"; };
+		122BD8AC99D9FA304141AB281903A5E7 /* VCSwiftToolkit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VCSwiftToolkit-umbrella.h"; sourceTree = "<group>"; };
+		13ABABC01C126BCDD4218EDE74551123 /* EFQRCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EFQRCode.h; path = Source/EFQRCode.h; sourceTree = "<group>"; };
+		1621F2D9B374101B597A2CCD3393E8E9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		169BBCFEC9D8CF7111A55E53B5381F99 /* QRMaskPattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRMaskPattern.swift; path = Source/QRMaskPattern.swift; sourceTree = "<group>"; };
+		16A6258CC977638CEE69D53A3CF9CF6F /* EFQRCode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFQRCode-dummy.m"; sourceTree = "<group>"; };
+		177EA3E09332A8171EFC37E19899B205 /* QRBitBuffer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRBitBuffer.swift; path = Source/QRBitBuffer.swift; sourceTree = "<group>"; };
+		1AA79A23C23F5FCD818DB04C9709865B /* CIImage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CIImage+.swift"; path = "Source/CIImage+.swift"; sourceTree = "<group>"; };
+		1F29ABC4CB0FF1098B5BF4747A46EB47 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EFQRCode.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FBF8B0A1045DF1F1DA8D80F673B10CF /* VCSwiftToolkit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VCSwiftToolkit.modulemap; sourceTree = "<group>"; };
+		22FBBF67E057230B9CF52DEB57C8A0C8 /* VCSwiftToolkit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VCSwiftToolkit.xcconfig; sourceTree = "<group>"; };
+		30272E1482B0AA2E7D7C6D389DA568B7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32C010F08D1D1782C43B91BC601115DD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		335C5A0B028666F0E3858F63DB2CD605 /* VCSwiftToolkit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VCSwiftToolkit-dummy.m"; sourceTree = "<group>"; };
+		3945BD676A286A2C941FBC5BA69936F9 /* Failed.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Failed.swift; path = Source/Failed.swift; sourceTree = "<group>"; };
+		398C47F9118695F689527F94BBCC7AD7 /* Pods-VCSwiftToolkit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VCSwiftToolkit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3A7DAC89FD7917778DE80AB55D4533C8 /* EFDefine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFDefine.swift; path = Source/EFDefine.swift; sourceTree = "<group>"; };
+		42BC5F679B32B240199AC06181D7AE62 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalNotificationHelper.swift; path = VCSwiftToolkit/Classes/LocalNotificationHelper.swift; sourceTree = "<group>"; };
+		467CCF186C164154E659D88C3CDEB4A7 /* VCSwiftToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VCSwiftToolkit.framework; path = VCSwiftToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4845E7C0313A5AE370EE31526F2B0F10 /* QRCodeModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeModel.swift; path = Source/QRCodeModel.swift; sourceTree = "<group>"; };
+		4C90AA996C75320F04023B7E4CCBD3AE /* EFQRCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFQRCode.swift; path = Source/EFQRCode.swift; sourceTree = "<group>"; };
+		508500C0B088072703DE71F8E059108A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52D598F566C27516F7C15EDD5C5364D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		55A9E191BFDD395DC7E3FACDF2C0B283 /* NSColor+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSColor+.swift"; path = "Source/NSColor+.swift"; sourceTree = "<group>"; };
+		5B27F943056D0943CD131FF6D30AB3BA /* QRPatternLocator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRPatternLocator.swift; path = Source/QRPatternLocator.swift; sourceTree = "<group>"; };
+		5B58A53F904607ABD723521B78E977AA /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E1EB491BA231820E2C5FD73C00D6E3E /* Pods-VCSwiftToolkit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VCSwiftToolkit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		648BAFD7086154F586C6EC1A5A4D7409 /* QRErrorCorrectLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRErrorCorrectLevel.swift; path = Source/QRErrorCorrectLevel.swift; sourceTree = "<group>"; };
+		6717216EA02B56F14879311327C6EFDC /* ReadableIntervalLocaleProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReadableIntervalLocaleProtocol.swift; path = VCSwiftToolkit/Classes/ReadableIntervalLocaleProtocol.swift; sourceTree = "<group>"; };
+		6876921A5FFEF499BC1FBEC19E5BF21D /* UIImage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+.swift"; path = "Source/UIImage+.swift"; sourceTree = "<group>"; };
+		69B2E9BCB83C4D7D659E331254B83628 /* EFQRCode-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFQRCode-umbrella.h"; sourceTree = "<group>"; };
+		6F3452DA7EA4CD9D5BC75F6829540818 /* VCToolkit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VCToolkit.swift; path = VCSwiftToolkit/Classes/VCToolkit.swift; sourceTree = "<group>"; };
+		705C435719F5F94EB7926FCDAAC7AE04 /* Pods-VCSwiftToolkit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VCSwiftToolkit_Example.modulemap"; sourceTree = "<group>"; };
+		759D64B69BF40EAB2184331533F029CC /* CGSize+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+.swift"; path = "Source/CGSize+.swift"; sourceTree = "<group>"; };
+		7E33E18BFB7D3D3D29C80873E53179E8 /* Pods-VCSwiftToolkit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCSwiftToolkit_Example-resources.sh"; sourceTree = "<group>"; };
+		7FE561D866D67046A3AC6367299B966B /* UIColor+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+.swift"; path = "Source/UIColor+.swift"; sourceTree = "<group>"; };
+		82BA2F390B795E25728F9124EF1EC892 /* VCSwiftToolkit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VCSwiftToolkit-prefix.pch"; sourceTree = "<group>"; };
+		8C8228299724FEFBB37AE016C96AF789 /* CIColor+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CIColor+.swift"; path = "Source/CIColor+.swift"; sourceTree = "<group>"; };
+		902A352BBA8F40B76C8C13321A6F034C /* QR8bitByte.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QR8bitByte.swift; path = Source/QR8bitByte.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EADEAA72A41CEB58C6BC291E6566CD8 /* Pods-VCSwiftToolkit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VCSwiftToolkit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A40FDD2065509FAD47973CFF4DF518BA /* VCSwiftToolkit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = VCSwiftToolkit.modulemap; sourceTree = "<group>"; };
-		A6D6A02D715FEB886B2DBE50272AA8A2 /* Pods-VCSwiftToolkit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCSwiftToolkit_Example-resources.sh"; sourceTree = "<group>"; };
-		B30D310EADD18C1922E0FDE464ACF503 /* Pods-VCSwiftToolkit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VCSwiftToolkit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B45BE233D6E2AF353B9E2F1793474065 /* Pods-VCSwiftToolkit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCSwiftToolkit_Tests-resources.sh"; sourceTree = "<group>"; };
-		B5E5749DE6036FC4AA47D65DA91E828F /* CIImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CIImageExtension.swift; path = QRCode/CIImageExtension.swift; sourceTree = "<group>"; };
-		B97672C3F247A7439740688C31991BD4 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageViewExtension.swift; path = QRCode/UIImageViewExtension.swift; sourceTree = "<group>"; };
-		C46C3809EBAAB5D0679349424E8F0789 /* TestJSON.json */ = {isa = PBXFileReference; includeInIndex = 1; name = TestJSON.json; path = VCSwiftToolkit/Classes/TestJSON.json; sourceTree = "<group>"; };
-		C8FCF6A74CAA05B10D3C32245F57514B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE59BDD3A9EA63573D94D413606BCB94 /* Pods-VCSwiftToolkit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VCSwiftToolkit_Tests-umbrella.h"; sourceTree = "<group>"; };
-		D4A044B1DF4F7AC78853CDA949DF3BBA /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalNotificationHelper.swift; path = VCSwiftToolkit/Classes/LocalNotificationHelper.swift; sourceTree = "<group>"; };
-		DD136B64A1C795305CD908F851AEB539 /* VCSwiftToolkit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VCSwiftToolkit-umbrella.h"; sourceTree = "<group>"; };
-		DDA8A13F072338C41CBEBC944A162DC2 /* ReadableIntervalLocaleProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReadableIntervalLocaleProtocol.swift; path = VCSwiftToolkit/Classes/ReadableIntervalLocaleProtocol.swift; sourceTree = "<group>"; };
-		E4D3E6F341A2853DF269981B9937C3DF /* QRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB105FCA43F9EF72A681A2A828C919C5 /* Pods-VCSwiftToolkit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCSwiftToolkit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		ED6F73A4137BE7A36AE5A7C7C4DB36D8 /* Pods-VCSwiftToolkit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCSwiftToolkit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		EF6C4EAD3C48039DF23250BCB13D3EFB /* Pods-VCSwiftToolkit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VCSwiftToolkit_Example-umbrella.h"; sourceTree = "<group>"; };
-		EFC82B0F11D95D3D5179D8063A766DA4 /* Pods_VCSwiftToolkit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_VCSwiftToolkit_Example.framework; path = "Pods-VCSwiftToolkit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F327591613B51C53CC444555AC4EF9A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		999C4B6063DD300B108FA7BA9F4B474D /* Pods-VCSwiftToolkit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VCSwiftToolkit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9A6E38D36D236DC5C32E76D0B7E1045D /* CGImage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGImage+.swift"; path = "Source/CGImage+.swift"; sourceTree = "<group>"; };
+		9C781D4AF51C206524EA489CDCC34811 /* Pods-VCSwiftToolkit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VCSwiftToolkit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D0E492CDB09D7A607549BDDD3D7C95A /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = VCSwiftToolkit/Classes/Extensions.swift; sourceTree = "<group>"; };
+		9EB071952C9AC0E81A54405A3EBD4E50 /* Pods-VCSwiftToolkit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCSwiftToolkit_Example-frameworks.sh"; sourceTree = "<group>"; };
+		A1232109C90C4433BC699CB54ECD93FB /* Pods-VCSwiftToolkit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCSwiftToolkit_Tests-resources.sh"; sourceTree = "<group>"; };
+		A6F14234A975C1194FF1DC810A157BF0 /* VCFileManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VCFileManager.swift; path = VCSwiftToolkit/Classes/VCFileManager.swift; sourceTree = "<group>"; };
+		A6FC553AE9B570E0DE9B51697AA57FC9 /* Pods-VCSwiftToolkit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VCSwiftToolkit_Tests.modulemap"; sourceTree = "<group>"; };
+		A82CB17E9F4D83819C46785079E9B998 /* Pods-VCSwiftToolkit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCSwiftToolkit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AE93CD29E69D0F7A6651813AC59DB86C /* TestJSON.json */ = {isa = PBXFileReference; includeInIndex = 1; name = TestJSON.json; path = VCSwiftToolkit/Classes/TestJSON.json; sourceTree = "<group>"; };
+		B0D0B3E9E942EE6C3DC242F146FA0AF6 /* Pods_VCSwiftToolkit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_VCSwiftToolkit_Example.framework; path = "Pods-VCSwiftToolkit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1BED6090CB6CFFEA182AAB66FA97E0C /* CGColor+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGColor+.swift"; path = "Source/CGColor+.swift"; sourceTree = "<group>"; };
+		B6F51C0F2CDF8E2DAE875AE62B1DF27E /* Pods-VCSwiftToolkit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VCSwiftToolkit_Example-dummy.m"; sourceTree = "<group>"; };
+		B8B5FA5749EFE95928A54FF8EB70A62F /* VCSwiftToolkit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = VCSwiftToolkit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B9364DD71955E675B6DF7E39A23B810B /* QRRSBlock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRRSBlock.swift; path = Source/QRRSBlock.swift; sourceTree = "<group>"; };
+		C0C9B62D4E85464A09C8D19BB774EF3C /* Pods-VCSwiftToolkit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VCSwiftToolkit_Tests-umbrella.h"; sourceTree = "<group>"; };
+		C2E0B4121F3410A8D627722667AAB66E /* Pods-VCSwiftToolkit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCSwiftToolkit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C2EE81D613D37FEC8DBB0787BF7192A7 /* QRMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRMode.swift; path = Source/QRMode.swift; sourceTree = "<group>"; };
+		C4168287B4D70006FB34E86F39BC6780 /* Pods-VCSwiftToolkit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VCSwiftToolkit_Example-umbrella.h"; sourceTree = "<group>"; };
+		CC8A9A143FED86622E31D38EA8B2DAC0 /* EFQRCodeRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFQRCodeRecognizer.swift; path = Source/EFQRCodeRecognizer.swift; sourceTree = "<group>"; };
+		CDA4A140C7CC0DE8854320ED324CF506 /* Pods-VCSwiftToolkit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCSwiftToolkit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDFE08D45F85745FBF08DF54FD2964C7 /* VCLocaleHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VCLocaleHelper.swift; path = VCSwiftToolkit/Classes/VCLocaleHelper.swift; sourceTree = "<group>"; };
+		D5B742639578494B60BBB2D039BA9BFE /* Pods_VCSwiftToolkit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_VCSwiftToolkit_Tests.framework; path = "Pods-VCSwiftToolkit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5F90EB386164A49EF7711C3EE3B2653 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7424ABE293E98A4AEFDFF780BB58154 /* QRPolynomial.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRPolynomial.swift; path = Source/QRPolynomial.swift; sourceTree = "<group>"; };
+		D7842C92AA5979977458EDB4F96A0BA8 /* Pods-VCSwiftToolkit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCSwiftToolkit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D8DB6FB6D6C01CEC16AB15BAD23D985A /* QRMath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRMath.swift; path = Source/QRMath.swift; sourceTree = "<group>"; };
+		D9D6C24F31A3698DD58FDBF0E5D09BE4 /* BCHUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BCHUtil.swift; path = Source/BCHUtil.swift; sourceTree = "<group>"; };
+		D9FDED18696D5F94D3F41F4459786080 /* EFQRCodeGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFQRCodeGenerator.swift; path = Source/EFQRCodeGenerator.swift; sourceTree = "<group>"; };
+		EE07FE0FB18A349AEA4EFAE3DC532312 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		EF80950F9AF1D8A5921914B44AA38FE2 /* EFQRCode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFQRCode-prefix.pch"; sourceTree = "<group>"; };
+		F09A52B142B82BE89DDB7C92C29D3092 /* NSImage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSImage+.swift"; path = "Source/NSImage+.swift"; sourceTree = "<group>"; };
+		F90300F070FC898A4C3DEB0DD1919713 /* Pods-VCSwiftToolkit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VCSwiftToolkit_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		FA042C484EC1462C0A25F5EB347651B1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		FA2021F38A7CA38FACCEC24C64C2EF8C /* EFQRCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EFQRCode.modulemap; sourceTree = "<group>"; };
+		FCD4543B669D57A34310195FE9ABC2D1 /* EFQRCode+GIF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EFQRCode+GIF.swift"; path = "Source/EFQRCode+GIF.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		07727ED6ADC6CA61221E2091AC16CE82 /* Frameworks */ = {
+		13F9F407B4E69E3DB08A158DA1809927 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D0184C441D7B5AD3EA3917FAE07195B /* Foundation.framework in Frameworks */,
+				BA2042BB80BB376701940E5A59875731 /* Foundation.framework in Frameworks */,
+				2D1A68D7BCFD4BB064DBB53E37DF0A0E /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		280B5A4B6BA583C61C8EEED041CABC3F /* Frameworks */ = {
+		3B009E42D7A90FC065C477A628829668 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1FDCE036EF5A5C4735304E9C62D9BB3 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7245748F4B86C802B93C070C144C1FD7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E92CF41925FB4D526796334E433099D /* Foundation.framework in Frameworks */,
-				6AB782B09F29FD9F0C7D4C50C2B0F347 /* QRCode.framework in Frameworks */,
+				6BCEA8F406E37F3EC01F5AEC43E8A655 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,162 +189,207 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D10AAC96A27FF0B4AF2391B46FB6ADB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C55DFE41FF4EA7B7F7E333E7E8F223 /* EFQRCode.framework in Frameworks */,
+				2F6EC132B78C4B9E5CB481B002CE9902 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F42A33ED60CF4C731A3A4671ABEF092 /* Frameworks */ = {
+		17438749B04946B2447F78AC92A8B7E2 /* Pods-VCSwiftToolkit_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E4D3E6F341A2853DF269981B9937C3DF /* QRCode.framework */,
-				5CE007BB72BB33C81C6DFDBA8A3EB89C /* iOS */,
+				D5F90EB386164A49EF7711C3EE3B2653 /* Info.plist */,
+				A6FC553AE9B570E0DE9B51697AA57FC9 /* Pods-VCSwiftToolkit_Tests.modulemap */,
+				999C4B6063DD300B108FA7BA9F4B474D /* Pods-VCSwiftToolkit_Tests-acknowledgements.markdown */,
+				5E1EB491BA231820E2C5FD73C00D6E3E /* Pods-VCSwiftToolkit_Tests-acknowledgements.plist */,
+				111343C1DBBF6855304A7363C4AD6839 /* Pods-VCSwiftToolkit_Tests-dummy.m */,
+				F90300F070FC898A4C3DEB0DD1919713 /* Pods-VCSwiftToolkit_Tests-frameworks.sh */,
+				A1232109C90C4433BC699CB54ECD93FB /* Pods-VCSwiftToolkit_Tests-resources.sh */,
+				C0C9B62D4E85464A09C8D19BB774EF3C /* Pods-VCSwiftToolkit_Tests-umbrella.h */,
+				CDA4A140C7CC0DE8854320ED324CF506 /* Pods-VCSwiftToolkit_Tests.debug.xcconfig */,
+				A82CB17E9F4D83819C46785079E9B998 /* Pods-VCSwiftToolkit_Tests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Pods-VCSwiftToolkit_Tests";
+			path = "Target Support Files/Pods-VCSwiftToolkit_Tests";
 			sourceTree = "<group>";
 		};
-		3E2F13AA88E42538C3D88B6EBC7BD5E2 /* Development Pods */ = {
+		21BFBCF8896455220FE06D9ABDFEFCEC /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				EF47766C9124347D4636FF9928702386 /* VCSwiftToolkit */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		42EA8E622F837CA02BDDD236F25F48C7 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1C37924E26E4CD9011A254136AEC573E /* Info.plist */,
-				A40FDD2065509FAD47973CFF4DF518BA /* VCSwiftToolkit.modulemap */,
-				369CC0BCA04DA6D9ABBBAE98B24EA65C /* VCSwiftToolkit.xcconfig */,
-				0681D753D9D76BEA17EA8652E221192F /* VCSwiftToolkit-dummy.m */,
-				71D5F89139CA40637D5B129A5F83A8C6 /* VCSwiftToolkit-prefix.pch */,
-				DD136B64A1C795305CD908F851AEB539 /* VCSwiftToolkit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/VCSwiftToolkit";
-			sourceTree = "<group>";
-		};
-		5CE007BB72BB33C81C6DFDBA8A3EB89C /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				12382F667507BC3799E0D84E765AF112 /* Foundation.framework */,
+				52D598F566C27516F7C15EDD5C5364D4 /* Foundation.framework */,
+				1621F2D9B374101B597A2CCD3393E8E9 /* ImageIO.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		611A3CC940BB24B08A094E259D1473BE /* Products */ = {
+		3AB26D3F6454A9182D7D3B78675474E6 /* EFQRCode */ = {
 			isa = PBXGroup;
 			children = (
-				EFC82B0F11D95D3D5179D8063A766DA4 /* Pods_VCSwiftToolkit_Example.framework */,
-				07268F8EBDCC0BCB32054B165E2F1462 /* Pods_VCSwiftToolkit_Tests.framework */,
-				70B03346C38CF0F21F4EBA5E78C605A2 /* QRCode.framework */,
-				67D9BD815E5EFA62F0D8DB134FDF1253 /* VCSwiftToolkit.framework */,
+				D9D6C24F31A3698DD58FDBF0E5D09BE4 /* BCHUtil.swift */,
+				B1BED6090CB6CFFEA182AAB66FA97E0C /* CGColor+.swift */,
+				9A6E38D36D236DC5C32E76D0B7E1045D /* CGImage+.swift */,
+				759D64B69BF40EAB2184331533F029CC /* CGSize+.swift */,
+				8C8228299724FEFBB37AE016C96AF789 /* CIColor+.swift */,
+				1AA79A23C23F5FCD818DB04C9709865B /* CIImage+.swift */,
+				3A7DAC89FD7917778DE80AB55D4533C8 /* EFDefine.swift */,
+				13ABABC01C126BCDD4218EDE74551123 /* EFQRCode.h */,
+				4C90AA996C75320F04023B7E4CCBD3AE /* EFQRCode.swift */,
+				FCD4543B669D57A34310195FE9ABC2D1 /* EFQRCode+GIF.swift */,
+				D9FDED18696D5F94D3F41F4459786080 /* EFQRCodeGenerator.swift */,
+				CC8A9A143FED86622E31D38EA8B2DAC0 /* EFQRCodeRecognizer.swift */,
+				3945BD676A286A2C941FBC5BA69936F9 /* Failed.swift */,
+				55A9E191BFDD395DC7E3FACDF2C0B283 /* NSColor+.swift */,
+				F09A52B142B82BE89DDB7C92C29D3092 /* NSImage+.swift */,
+				902A352BBA8F40B76C8C13321A6F034C /* QR8bitByte.swift */,
+				177EA3E09332A8171EFC37E19899B205 /* QRBitBuffer.swift */,
+				4845E7C0313A5AE370EE31526F2B0F10 /* QRCodeModel.swift */,
+				0757BB26CC55AE0BEDAB5466451796EA /* QRCodeType.swift */,
+				648BAFD7086154F586C6EC1A5A4D7409 /* QRErrorCorrectLevel.swift */,
+				169BBCFEC9D8CF7111A55E53B5381F99 /* QRMaskPattern.swift */,
+				D8DB6FB6D6C01CEC16AB15BAD23D985A /* QRMath.swift */,
+				C2EE81D613D37FEC8DBB0787BF7192A7 /* QRMode.swift */,
+				5B27F943056D0943CD131FF6D30AB3BA /* QRPatternLocator.swift */,
+				D7424ABE293E98A4AEFDFF780BB58154 /* QRPolynomial.swift */,
+				B9364DD71955E675B6DF7E39A23B810B /* QRRSBlock.swift */,
+				7FE561D866D67046A3AC6367299B966B /* UIColor+.swift */,
+				6876921A5FFEF499BC1FBEC19E5BF21D /* UIImage+.swift */,
+				3CBDF82905394D02CCB5B8520BEC1935 /* Support Files */,
+			);
+			name = EFQRCode;
+			path = EFQRCode;
+			sourceTree = "<group>";
+		};
+		3CBDF82905394D02CCB5B8520BEC1935 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA2021F38A7CA38FACCEC24C64C2EF8C /* EFQRCode.modulemap */,
+				110CE91F0247E921677AC5A21BF01F3C /* EFQRCode.xcconfig */,
+				16A6258CC977638CEE69D53A3CF9CF6F /* EFQRCode-dummy.m */,
+				EF80950F9AF1D8A5921914B44AA38FE2 /* EFQRCode-prefix.pch */,
+				69B2E9BCB83C4D7D659E331254B83628 /* EFQRCode-umbrella.h */,
+				508500C0B088072703DE71F8E059108A /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/EFQRCode";
+			sourceTree = "<group>";
+		};
+		4704A15698964F189100142FB95282D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F29ABC4CB0FF1098B5BF4747A46EB47 /* EFQRCode.framework */,
+				B0D0B3E9E942EE6C3DC242F146FA0AF6 /* Pods_VCSwiftToolkit_Example.framework */,
+				D5B742639578494B60BBB2D039BA9BFE /* Pods_VCSwiftToolkit_Tests.framework */,
+				467CCF186C164154E659D88C3CDEB4A7 /* VCSwiftToolkit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		77C492C0279587CF1EE688DA58A76F94 /* Support Files */ = {
+		64FD863DFF80DF233BAFB86AA99A07C7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C8FCF6A74CAA05B10D3C32245F57514B /* Info.plist */,
-				7AEC73CCD1042FE4A1587ED7F6E183B5 /* QRCode.modulemap */,
-				45F19D29E25CF0775330D9FF06E739FA /* QRCode.xcconfig */,
-				3B22CBAEF62D32AA1F53076EB9FF5DCB /* QRCode-dummy.m */,
-				104B11E2B3DC1FE18AD54056E8492E7E /* QRCode-prefix.pch */,
-				6B58E94171A167D32D6A9308E195A4D2 /* QRCode-umbrella.h */,
+				30272E1482B0AA2E7D7C6D389DA568B7 /* Info.plist */,
+				1FBF8B0A1045DF1F1DA8D80F673B10CF /* VCSwiftToolkit.modulemap */,
+				22FBBF67E057230B9CF52DEB57C8A0C8 /* VCSwiftToolkit.xcconfig */,
+				335C5A0B028666F0E3858F63DB2CD605 /* VCSwiftToolkit-dummy.m */,
+				82BA2F390B795E25728F9124EF1EC892 /* VCSwiftToolkit-prefix.pch */,
+				122BD8AC99D9FA304141AB281903A5E7 /* VCSwiftToolkit-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/QRCode";
+			path = "Example/Pods/Target Support Files/VCSwiftToolkit";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				3E2F13AA88E42538C3D88B6EBC7BD5E2 /* Development Pods */,
-				2F42A33ED60CF4C731A3A4671ABEF092 /* Frameworks */,
-				98923A4FFDA55D0BDEEACB6729905BD2 /* Pods */,
-				611A3CC940BB24B08A094E259D1473BE /* Products */,
+				8208CCF3C807E3DD0C0335F3A24802B7 /* Development Pods */,
+				CC57B46E60F6505573D5179973E888D8 /* Frameworks */,
+				A97F828CD2915E4CC066F98B93D32C8B /* Pods */,
+				4704A15698964F189100142FB95282D9 /* Products */,
 				926D4FD6AE2BB54B6DA1980EF03D1D8B /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8208CCF3C807E3DD0C0335F3A24802B7 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E65810FDCE8BE74DA860ECD41A4E73D0 /* VCSwiftToolkit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		85FCC24F8CAB8D6C6B0ADAA468FB8341 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				FA042C484EC1462C0A25F5EB347651B1 /* LICENSE */,
+				EE07FE0FB18A349AEA4EFAE3DC532312 /* README.md */,
+				B8B5FA5749EFE95928A54FF8EB70A62F /* VCSwiftToolkit.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		926D4FD6AE2BB54B6DA1980EF03D1D8B /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C33A9138C5E3A9564BB001FE9623EE28 /* Pods-VCSwiftToolkit_Example */,
-				9AFD0E20697452F19E3C39C6831FDC15 /* Pods-VCSwiftToolkit_Tests */,
+				D3D9970E4AFBF5B1006CCF3C778EF3D2 /* Pods-VCSwiftToolkit_Example */,
+				17438749B04946B2447F78AC92A8B7E2 /* Pods-VCSwiftToolkit_Tests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		98923A4FFDA55D0BDEEACB6729905BD2 /* Pods */ = {
+		A97F828CD2915E4CC066F98B93D32C8B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C77E89B9BA093391F25AFB349816A314 /* QRCode */,
+				3AB26D3F6454A9182D7D3B78675474E6 /* EFQRCode */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9AFD0E20697452F19E3C39C6831FDC15 /* Pods-VCSwiftToolkit_Tests */ = {
+		CC57B46E60F6505573D5179973E888D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				892E0B07B56D9F5E030A57701978F669 /* Info.plist */,
-				12975775F8BE62AB1516329F8E18FE58 /* Pods-VCSwiftToolkit_Tests.modulemap */,
-				9EADEAA72A41CEB58C6BC291E6566CD8 /* Pods-VCSwiftToolkit_Tests-acknowledgements.markdown */,
-				B30D310EADD18C1922E0FDE464ACF503 /* Pods-VCSwiftToolkit_Tests-acknowledgements.plist */,
-				39777CFA4DBBD3BC6ECD179138BF78C9 /* Pods-VCSwiftToolkit_Tests-dummy.m */,
-				7822BF40EB004FB95B7F0FEC54A80C5A /* Pods-VCSwiftToolkit_Tests-frameworks.sh */,
-				B45BE233D6E2AF353B9E2F1793474065 /* Pods-VCSwiftToolkit_Tests-resources.sh */,
-				CE59BDD3A9EA63573D94D413606BCB94 /* Pods-VCSwiftToolkit_Tests-umbrella.h */,
-				40E5C4EA9180F189ACBEE64A36F47937 /* Pods-VCSwiftToolkit_Tests.debug.xcconfig */,
-				ED6F73A4137BE7A36AE5A7C7C4DB36D8 /* Pods-VCSwiftToolkit_Tests.release.xcconfig */,
+				5B58A53F904607ABD723521B78E977AA /* EFQRCode.framework */,
+				21BFBCF8896455220FE06D9ABDFEFCEC /* iOS */,
 			);
-			name = "Pods-VCSwiftToolkit_Tests";
-			path = "Target Support Files/Pods-VCSwiftToolkit_Tests";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C33A9138C5E3A9564BB001FE9623EE28 /* Pods-VCSwiftToolkit_Example */ = {
+		D3D9970E4AFBF5B1006CCF3C778EF3D2 /* Pods-VCSwiftToolkit_Example */ = {
 			isa = PBXGroup;
 			children = (
-				F327591613B51C53CC444555AC4EF9A4 /* Info.plist */,
-				7CDBB95656F9201AAC5946D53211E355 /* Pods-VCSwiftToolkit_Example.modulemap */,
-				08CAEBFAC0D4A760705B3AEAFACEC729 /* Pods-VCSwiftToolkit_Example-acknowledgements.markdown */,
-				91FBCA4277FC7D90927BF17DE5761888 /* Pods-VCSwiftToolkit_Example-acknowledgements.plist */,
-				84C1DA69283397CBA487877E69E23BE3 /* Pods-VCSwiftToolkit_Example-dummy.m */,
-				79D0E5E15D4710B89AFBE26FA9449D91 /* Pods-VCSwiftToolkit_Example-frameworks.sh */,
-				A6D6A02D715FEB886B2DBE50272AA8A2 /* Pods-VCSwiftToolkit_Example-resources.sh */,
-				EF6C4EAD3C48039DF23250BCB13D3EFB /* Pods-VCSwiftToolkit_Example-umbrella.h */,
-				EB105FCA43F9EF72A681A2A828C919C5 /* Pods-VCSwiftToolkit_Example.debug.xcconfig */,
-				91B396243BD5BF770F495A3BFC2A8C21 /* Pods-VCSwiftToolkit_Example.release.xcconfig */,
+				32C010F08D1D1782C43B91BC601115DD /* Info.plist */,
+				705C435719F5F94EB7926FCDAAC7AE04 /* Pods-VCSwiftToolkit_Example.modulemap */,
+				398C47F9118695F689527F94BBCC7AD7 /* Pods-VCSwiftToolkit_Example-acknowledgements.markdown */,
+				9C781D4AF51C206524EA489CDCC34811 /* Pods-VCSwiftToolkit_Example-acknowledgements.plist */,
+				B6F51C0F2CDF8E2DAE875AE62B1DF27E /* Pods-VCSwiftToolkit_Example-dummy.m */,
+				9EB071952C9AC0E81A54405A3EBD4E50 /* Pods-VCSwiftToolkit_Example-frameworks.sh */,
+				7E33E18BFB7D3D3D29C80873E53179E8 /* Pods-VCSwiftToolkit_Example-resources.sh */,
+				C4168287B4D70006FB34E86F39BC6780 /* Pods-VCSwiftToolkit_Example-umbrella.h */,
+				C2E0B4121F3410A8D627722667AAB66E /* Pods-VCSwiftToolkit_Example.debug.xcconfig */,
+				D7842C92AA5979977458EDB4F96A0BA8 /* Pods-VCSwiftToolkit_Example.release.xcconfig */,
 			);
 			name = "Pods-VCSwiftToolkit_Example";
 			path = "Target Support Files/Pods-VCSwiftToolkit_Example";
 			sourceTree = "<group>";
 		};
-		C77E89B9BA093391F25AFB349816A314 /* QRCode */ = {
+		E65810FDCE8BE74DA860ECD41A4E73D0 /* VCSwiftToolkit */ = {
 			isa = PBXGroup;
 			children = (
-				8A25362ACD732E3C59798B8BF36206FA /* CIColorExtension.swift */,
-				B5E5749DE6036FC4AA47D65DA91E828F /* CIImageExtension.swift */,
-				4F0097B9EB35125DCE94F01ABB9F55E1 /* QRCode.swift */,
-				B97672C3F247A7439740688C31991BD4 /* UIImageViewExtension.swift */,
-				77C492C0279587CF1EE688DA58A76F94 /* Support Files */,
-			);
-			name = QRCode;
-			path = QRCode;
-			sourceTree = "<group>";
-		};
-		EF47766C9124347D4636FF9928702386 /* VCSwiftToolkit */ = {
-			isa = PBXGroup;
-			children = (
-				7ABA6BD71CA7CE22891C42DF3DB1C096 /* Extensions.swift */,
-				D4A044B1DF4F7AC78853CDA949DF3BBA /* LocalNotificationHelper.swift */,
-				DDA8A13F072338C41CBEBC944A162DC2 /* ReadableIntervalLocaleProtocol.swift */,
-				C46C3809EBAAB5D0679349424E8F0789 /* TestJSON.json */,
-				74285530949ABD0A8AD55A0FCB20403B /* VCFileManager.swift */,
-				3C148BED221EBDDE8E5F8A8454BA32B5 /* VCLocaleHelper.swift */,
-				2611B93C8918D80D63589A3C85239A34 /* VCToolkit.swift */,
-				42EA8E622F837CA02BDDD236F25F48C7 /* Support Files */,
+				9D0E492CDB09D7A607549BDDD3D7C95A /* Extensions.swift */,
+				42BC5F679B32B240199AC06181D7AE62 /* LocalNotificationHelper.swift */,
+				6717216EA02B56F14879311327C6EFDC /* ReadableIntervalLocaleProtocol.swift */,
+				AE93CD29E69D0F7A6651813AC59DB86C /* TestJSON.json */,
+				A6F14234A975C1194FF1DC810A157BF0 /* VCFileManager.swift */,
+				CDFE08D45F85745FBF08DF54FD2964C7 /* VCLocaleHelper.swift */,
+				6F3452DA7EA4CD9D5BC75F6829540818 /* VCToolkit.swift */,
+				85FCC24F8CAB8D6C6B0ADAA468FB8341 /* Pod */,
+				64FD863DFF80DF233BAFB86AA99A07C7 /* Support Files */,
 			);
 			name = VCSwiftToolkit;
 			path = ../..;
@@ -308,6 +398,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		15DF50594FE0834EDAEEF874B90C2F68 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2691E50707AF7D8588DC6C4A6239ADF /* VCSwiftToolkit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E314067016ADED44BED65E55E54B4F5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,67 +414,60 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77474E2A16256E089D04AD4C50E93478 /* Headers */ = {
+		945E622C5AE5142D6C69E9D6AFCF9499 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				312E3BA94B5F0E58B5983A378692A2DB /* VCSwiftToolkit-umbrella.h in Headers */,
+				4C480BB8A110F7DFBCD633AF2C4A3035 /* Pods-VCSwiftToolkit_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		94C4C2EB6D780E8CF2EB40E716EBDB11 /* Headers */ = {
+		D0F836E467CE6D931FC8E929CBE0CAD7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36184301B1ED1FED6F6A6FDDFE9021F0 /* QRCode-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EF149750C0BA939BB015E802996E0E34 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F2696F2F67F5D309B7B02BFFB0B79624 /* Pods-VCSwiftToolkit_Example-umbrella.h in Headers */,
+				D6277B603FC3E67E93E098D7FEAE213C /* EFQRCode-umbrella.h in Headers */,
+				DB59E0C0077A6A4089CB19D4484CBABE /* EFQRCode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3525CFC6272EAEA73A28BE8ED47AA543 /* Pods-VCSwiftToolkit_Example */ = {
+		5DC6B787693C950C91AA1161D25444D1 /* Pods-VCSwiftToolkit_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB4F75954178E41ED297F082C0D8F828 /* Build configuration list for PBXNativeTarget "Pods-VCSwiftToolkit_Example" */;
+			buildConfigurationList = 342336B8380DFE770C6D53948DE58837 /* Build configuration list for PBXNativeTarget "Pods-VCSwiftToolkit_Example" */;
 			buildPhases = (
-				86833F06F873D4A7A84CE2C95365B7CB /* Sources */,
-				07727ED6ADC6CA61221E2091AC16CE82 /* Frameworks */,
-				EF149750C0BA939BB015E802996E0E34 /* Headers */,
+				DB29341A7E982B530F039C70634E0621 /* Sources */,
+				3B009E42D7A90FC065C477A628829668 /* Frameworks */,
+				945E622C5AE5142D6C69E9D6AFCF9499 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				41CE07E76AE264D1902EA800C105C625 /* PBXTargetDependency */,
-				BE6C58C41F7415DB4891264C242F7175 /* PBXTargetDependency */,
+				1D30D83B47017CDF786CF01F33B2DAB5 /* PBXTargetDependency */,
+				6A947886519BFD79D25C1CD55C541F7D /* PBXTargetDependency */,
 			);
 			name = "Pods-VCSwiftToolkit_Example";
 			productName = "Pods-VCSwiftToolkit_Example";
-			productReference = EFC82B0F11D95D3D5179D8063A766DA4 /* Pods_VCSwiftToolkit_Example.framework */;
+			productReference = B0D0B3E9E942EE6C3DC242F146FA0AF6 /* Pods_VCSwiftToolkit_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		518ED4FCDA31D01A0AA6CA65FA4904B3 /* QRCode */ = {
+		8C13583B2E487345A7AA13B732D3D2E2 /* EFQRCode */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 067E970DC62356D90A059A6E40F4CD44 /* Build configuration list for PBXNativeTarget "QRCode" */;
+			buildConfigurationList = 39EFEFF162F2A1C847505A2978FBAEA6 /* Build configuration list for PBXNativeTarget "EFQRCode" */;
 			buildPhases = (
-				B72D508193D146F5F8B9352879743A18 /* Sources */,
-				280B5A4B6BA583C61C8EEED041CABC3F /* Frameworks */,
-				94C4C2EB6D780E8CF2EB40E716EBDB11 /* Headers */,
+				15840CBB8942C8B2E412CB84A80399D2 /* Sources */,
+				13F9F407B4E69E3DB08A158DA1809927 /* Frameworks */,
+				D0F836E467CE6D931FC8E929CBE0CAD7 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = QRCode;
-			productName = QRCode;
-			productReference = 70B03346C38CF0F21F4EBA5E78C605A2 /* QRCode.framework */;
+			name = EFQRCode;
+			productName = EFQRCode;
+			productReference = 1F29ABC4CB0FF1098B5BF4747A46EB47 /* EFQRCode.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AB4027FF4310C9DFCC2078EF83E74451 /* Pods-VCSwiftToolkit_Tests */ = {
@@ -393,25 +484,25 @@
 			);
 			name = "Pods-VCSwiftToolkit_Tests";
 			productName = "Pods-VCSwiftToolkit_Tests";
-			productReference = 07268F8EBDCC0BCB32054B165E2F1462 /* Pods_VCSwiftToolkit_Tests.framework */;
+			productReference = D5B742639578494B60BBB2D039BA9BFE /* Pods_VCSwiftToolkit_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C7574C84E28B543B38DDDE9F993E4601 /* VCSwiftToolkit */ = {
+		B8ADECB1B7423F5E924EB04579C3F1D5 /* VCSwiftToolkit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B7FEFCDE8DAB90CB7AE375A534F9C0A4 /* Build configuration list for PBXNativeTarget "VCSwiftToolkit" */;
+			buildConfigurationList = 2404C9263804611438D44E84BD65399E /* Build configuration list for PBXNativeTarget "VCSwiftToolkit" */;
 			buildPhases = (
-				C4819755D4DBA37F4D9BAA19E15B55E3 /* Sources */,
-				7245748F4B86C802B93C070C144C1FD7 /* Frameworks */,
-				77474E2A16256E089D04AD4C50E93478 /* Headers */,
+				1806CA9A744403B80FA99AFF9F0D93DF /* Sources */,
+				D10AAC96A27FF0B4AF2391B46FB6ADB2 /* Frameworks */,
+				15DF50594FE0834EDAEEF874B90C2F68 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				311C5DD4366B834FBF131007D3CF8A00 /* PBXTargetDependency */,
+				4F0AF846B5424FDC06798FEBE05FCF95 /* PBXTargetDependency */,
 			);
 			name = VCSwiftToolkit;
 			productName = VCSwiftToolkit;
-			productReference = 67D9BD815E5EFA62F0D8DB134FDF1253 /* VCSwiftToolkit.framework */;
+			productReference = 467CCF186C164154E659D88C3CDEB4A7 /* VCSwiftToolkit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -420,8 +511,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -431,51 +522,66 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 611A3CC940BB24B08A094E259D1473BE /* Products */;
+			productRefGroup = 4704A15698964F189100142FB95282D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3525CFC6272EAEA73A28BE8ED47AA543 /* Pods-VCSwiftToolkit_Example */,
+				8C13583B2E487345A7AA13B732D3D2E2 /* EFQRCode */,
+				5DC6B787693C950C91AA1161D25444D1 /* Pods-VCSwiftToolkit_Example */,
 				AB4027FF4310C9DFCC2078EF83E74451 /* Pods-VCSwiftToolkit_Tests */,
-				518ED4FCDA31D01A0AA6CA65FA4904B3 /* QRCode */,
-				C7574C84E28B543B38DDDE9F993E4601 /* VCSwiftToolkit */,
+				B8ADECB1B7423F5E924EB04579C3F1D5 /* VCSwiftToolkit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		86833F06F873D4A7A84CE2C95365B7CB /* Sources */ = {
+		15840CBB8942C8B2E412CB84A80399D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DE0410A7A7F89FE3A0BA775390EC82A /* Pods-VCSwiftToolkit_Example-dummy.m in Sources */,
+				2B076A089F85E56A5570A5B795526121 /* BCHUtil.swift in Sources */,
+				D2B95505099AAD250D902C7547ACCF37 /* CGColor+.swift in Sources */,
+				2F771072EB5C389801D404C79BB1BAC4 /* CGImage+.swift in Sources */,
+				34C530F2979ABA951B812D7E018604A6 /* CGSize+.swift in Sources */,
+				428BA69C0318558EF096C333907BA57E /* CIColor+.swift in Sources */,
+				0890570AD86BABD3C2D04D8C4EC19D1F /* CIImage+.swift in Sources */,
+				FE48EA24B762F3B17CB86C370ECC3E3D /* EFDefine.swift in Sources */,
+				6F0871BC069849E3D21DCA9D3185419D /* EFQRCode+GIF.swift in Sources */,
+				30F7E13D81F2160EDD9DEE7414D05FB3 /* EFQRCode-dummy.m in Sources */,
+				71C2031BF5815121B614C4AAABDA35C2 /* EFQRCode.swift in Sources */,
+				32DA36852D31D1D0565D4A27732144ED /* EFQRCodeGenerator.swift in Sources */,
+				DD881DC541BC2497BC2058CACA044B79 /* EFQRCodeRecognizer.swift in Sources */,
+				54845305AFC7FAB05183449ECD759B5F /* Failed.swift in Sources */,
+				E20AA62B11DEDEF6CA57FEAF89D51FE5 /* NSColor+.swift in Sources */,
+				02DB26737D2752363C21906E161C956C /* NSImage+.swift in Sources */,
+				D01D5C8E378E24CC8EB51F76119BECBA /* QR8bitByte.swift in Sources */,
+				E69E2563B76BA36756D2D22D392116C0 /* QRBitBuffer.swift in Sources */,
+				8F42BC9541EBECD5582A28D6E9BADA48 /* QRCodeModel.swift in Sources */,
+				AAB228D554DFDC29081A5A66E6EAADBA /* QRCodeType.swift in Sources */,
+				54086570B22DCE160DB8967D60EC7CA7 /* QRErrorCorrectLevel.swift in Sources */,
+				BD390767F5239B9B17334324EA63C255 /* QRMaskPattern.swift in Sources */,
+				11425EC33E971CBE266534C4428376DD /* QRMath.swift in Sources */,
+				36EBD3037E154ED5212ADA79E8642834 /* QRMode.swift in Sources */,
+				82A5AA21186E5607F7032365649BDB64 /* QRPatternLocator.swift in Sources */,
+				679F314CD3B1A190740971BA908D0905 /* QRPolynomial.swift in Sources */,
+				1F336301C76AA0F85EA1D8C8B48F5A84 /* QRRSBlock.swift in Sources */,
+				45A08273B6ED76F8B2024D48558746EC /* UIColor+.swift in Sources */,
+				48D5C99F50D0762934D7D6BF71043A5B /* UIImage+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B72D508193D146F5F8B9352879743A18 /* Sources */ = {
+		1806CA9A744403B80FA99AFF9F0D93DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				633E573D4B7ABA55DCBB5DDD75ABFF6F /* CIColorExtension.swift in Sources */,
-				D1F02CE7F36D0F2E0983A870571707D0 /* CIImageExtension.swift in Sources */,
-				82618203C5559C5D6633F5204684B8FE /* QRCode-dummy.m in Sources */,
-				D0C48AF5DE99910A602503B0B06F7A0B /* QRCode.swift in Sources */,
-				F218C7980ECD4842783D6DA6F6429C06 /* UIImageViewExtension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C4819755D4DBA37F4D9BAA19E15B55E3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C41240B46556EAC26C673642036CF6C2 /* Extensions.swift in Sources */,
-				512048249082F8FB0BEB77A4B442D68B /* LocalNotificationHelper.swift in Sources */,
-				2673A9CF15C784C269F025B047F4C92C /* ReadableIntervalLocaleProtocol.swift in Sources */,
-				B8B6300E7B5B43BEF253B8D0C0928EFA /* TestJSON.json in Sources */,
-				370E1432AD7127B7C8435D45D71E9610 /* VCFileManager.swift in Sources */,
-				A287208B3A722EB8BB3618E6558356AD /* VCLocaleHelper.swift in Sources */,
-				8806E19A7E7C7DC80E86B081CE2F9B63 /* VCSwiftToolkit-dummy.m in Sources */,
-				B9FCAD0A71627002B0AEF727B7C18992 /* VCToolkit.swift in Sources */,
+				D14D0F66201765BCB0D23E615330A622 /* Extensions.swift in Sources */,
+				081C420FDF6F1FAC3258E88D98D09D8E /* LocalNotificationHelper.swift in Sources */,
+				2EE252D8DD813C583DAB7C961565B578 /* ReadableIntervalLocaleProtocol.swift in Sources */,
+				85058B4CD7F82A7815083C973FECBC3E /* TestJSON.json in Sources */,
+				A1AD79BBA3DFDD7607A7B700BA212288 /* VCFileManager.swift in Sources */,
+				7FAA101B2230FC21FEF7F5B1A40935A2 /* VCLocaleHelper.swift in Sources */,
+				DF29D8CFC3C0F66644604E1A1312A993 /* VCSwiftToolkit-dummy.m in Sources */,
+				6CC564EF9382870D2B71F282CEBC2935 /* VCToolkit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,31 +593,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DB29341A7E982B530F039C70634E0621 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B4CD05C5CCD795CB745B0DF94B7BAC /* Pods-VCSwiftToolkit_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		311C5DD4366B834FBF131007D3CF8A00 /* PBXTargetDependency */ = {
+		1D30D83B47017CDF786CF01F33B2DAB5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = QRCode;
-			target = 518ED4FCDA31D01A0AA6CA65FA4904B3 /* QRCode */;
-			targetProxy = 17D5F8AE791804AAC9C22B1CD92386ED /* PBXContainerItemProxy */;
+			name = EFQRCode;
+			target = 8C13583B2E487345A7AA13B732D3D2E2 /* EFQRCode */;
+			targetProxy = 0E89970C980EC0BFBB1A2BB68A43ED0A /* PBXContainerItemProxy */;
 		};
-		41CE07E76AE264D1902EA800C105C625 /* PBXTargetDependency */ = {
+		4F0AF846B5424FDC06798FEBE05FCF95 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = QRCode;
-			target = 518ED4FCDA31D01A0AA6CA65FA4904B3 /* QRCode */;
-			targetProxy = ADBE788BE97D300662AB42F09CAEFA73 /* PBXContainerItemProxy */;
+			name = EFQRCode;
+			target = 8C13583B2E487345A7AA13B732D3D2E2 /* EFQRCode */;
+			targetProxy = 047179D2366B76837DC5084051C66D16 /* PBXContainerItemProxy */;
 		};
-		BE6C58C41F7415DB4891264C242F7175 /* PBXTargetDependency */ = {
+		6A947886519BFD79D25C1CD55C541F7D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VCSwiftToolkit;
-			target = C7574C84E28B543B38DDDE9F993E4601 /* VCSwiftToolkit */;
-			targetProxy = 50F3198A1E3706EEB5A938B94777CAA4 /* PBXContainerItemProxy */;
+			target = B8ADECB1B7423F5E924EB04579C3F1D5 /* VCSwiftToolkit */;
+			targetProxy = 106F6F17412C084D7CDF865EB803D0F5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1CDAB5613991E411E5990BAF694995C5 /* Debug */ = {
+		1C3ED16E144B9A188CC88F2343EB3B4F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -521,10 +635,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -532,6 +648,65 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		51F393FE91B4B6C835FB4B238187AD09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -571,9 +746,9 @@
 			};
 			name = Debug;
 		};
-		1D97392512674F649C36DE20D612731B /* Debug */ = {
+		5F122F1628CDB3A34BD2049B1ECD705C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45F19D29E25CF0775330D9FF06E739FA /* QRCode.xcconfig */;
+			baseConfigurationReference = 110CE91F0247E921677AC5A21BF01F3C /* EFQRCode.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -584,44 +759,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/QRCode/QRCode-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QRCode/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/EFQRCode/EFQRCode-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EFQRCode/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QRCode/QRCode.modulemap";
-				PRODUCT_NAME = QRCode;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		62ABF2D8B0F3288DA57C0F9DD2D0D306 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45F19D29E25CF0775330D9FF06E739FA /* QRCode.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/QRCode/QRCode-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QRCode/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QRCode/QRCode.modulemap";
-				PRODUCT_NAME = QRCode;
+				MODULEMAP_FILE = "Target Support Files/EFQRCode/EFQRCode.modulemap";
+				PRODUCT_NAME = EFQRCode;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -634,40 +778,9 @@
 			};
 			name = Release;
 		};
-		644A98B34279F25E645F6B73D92A0372 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 369CC0BCA04DA6D9ABBBAE98B24EA65C /* VCSwiftToolkit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/VCSwiftToolkit/VCSwiftToolkit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VCSwiftToolkit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/VCSwiftToolkit/VCSwiftToolkit.modulemap";
-				PRODUCT_NAME = VCSwiftToolkit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		6A9702066684138D46EAACC65128C338 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED6F73A4137BE7A36AE5A7C7C4DB36D8 /* Pods-VCSwiftToolkit_Tests.release.xcconfig */;
+			baseConfigurationReference = A82CB17E9F4D83819C46785079E9B998 /* Pods-VCSwiftToolkit_Tests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -698,64 +811,9 @@
 			};
 			name = Release;
 		};
-		7B62A85C412D689EF418FA67DA770A41 /* Release */ = {
+		966469C9CCDB0C98F5FF9B30B24BEEA3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		8FCAAFDDFFE43984C7DDAF1D5E6AFF30 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91B396243BD5BF770F495A3BFC2A8C21 /* Pods-VCSwiftToolkit_Example.release.xcconfig */;
+			baseConfigurationReference = D7842C92AA5979977458EDB4F96A0BA8 /* Pods-VCSwiftToolkit_Example.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -787,9 +845,9 @@
 			};
 			name = Release;
 		};
-		C0DC1731F2BDC45AAAEF2F6B77DDB232 /* Debug */ = {
+		BFA8E371D3A131ED455A89BFEC07EB3E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB105FCA43F9EF72A681A2A828C919C5 /* Pods-VCSwiftToolkit_Example.debug.xcconfig */;
+			baseConfigurationReference = C2E0B4121F3410A8D627722667AAB66E /* Pods-VCSwiftToolkit_Example.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -821,9 +879,9 @@
 			};
 			name = Debug;
 		};
-		D9DF87BAB6EE6E7E2E2C1694894FAB27 /* Release */ = {
+		E84CBE4C976C4E6F7EB690EC9EAA2CD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 369CC0BCA04DA6D9ABBBAE98B24EA65C /* VCSwiftToolkit.xcconfig */;
+			baseConfigurationReference = 110CE91F0247E921677AC5A21BF01F3C /* EFQRCode.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -834,28 +892,27 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/VCSwiftToolkit/VCSwiftToolkit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VCSwiftToolkit/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/EFQRCode/EFQRCode-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EFQRCode/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/VCSwiftToolkit/VCSwiftToolkit.modulemap";
-				PRODUCT_NAME = VCSwiftToolkit;
+				MODULEMAP_FILE = "Target Support Files/EFQRCode/EFQRCode.modulemap";
+				PRODUCT_NAME = EFQRCode;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		E96079F6F4BD35563628802EBE3A5A6B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40E5C4EA9180F189ACBEE64A36F47937 /* Pods-VCSwiftToolkit_Tests.debug.xcconfig */;
+			baseConfigurationReference = CDA4A140C7CC0DE8854320ED324CF506 /* Pods-VCSwiftToolkit_Tests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -885,14 +942,77 @@
 			};
 			name = Debug;
 		};
+		FCE299D1AE499A7862FD2A0E59CF1D99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22FBBF67E057230B9CF52DEB57C8A0C8 /* VCSwiftToolkit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VCSwiftToolkit/VCSwiftToolkit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VCSwiftToolkit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VCSwiftToolkit/VCSwiftToolkit.modulemap";
+				PRODUCT_NAME = VCSwiftToolkit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FDBC366EA7830F7B674BF37C0890225C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22FBBF67E057230B9CF52DEB57C8A0C8 /* VCSwiftToolkit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VCSwiftToolkit/VCSwiftToolkit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VCSwiftToolkit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VCSwiftToolkit/VCSwiftToolkit.modulemap";
+				PRODUCT_NAME = VCSwiftToolkit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		067E970DC62356D90A059A6E40F4CD44 /* Build configuration list for PBXNativeTarget "QRCode" */ = {
+		2404C9263804611438D44E84BD65399E /* Build configuration list for PBXNativeTarget "VCSwiftToolkit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1D97392512674F649C36DE20D612731B /* Debug */,
-				62ABF2D8B0F3288DA57C0F9DD2D0D306 /* Release */,
+				FCE299D1AE499A7862FD2A0E59CF1D99 /* Debug */,
+				FDBC366EA7830F7B674BF37C0890225C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -909,26 +1029,26 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1CDAB5613991E411E5990BAF694995C5 /* Debug */,
-				7B62A85C412D689EF418FA67DA770A41 /* Release */,
+				51F393FE91B4B6C835FB4B238187AD09 /* Debug */,
+				1C3ED16E144B9A188CC88F2343EB3B4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B7FEFCDE8DAB90CB7AE375A534F9C0A4 /* Build configuration list for PBXNativeTarget "VCSwiftToolkit" */ = {
+		342336B8380DFE770C6D53948DE58837 /* Build configuration list for PBXNativeTarget "Pods-VCSwiftToolkit_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				644A98B34279F25E645F6B73D92A0372 /* Debug */,
-				D9DF87BAB6EE6E7E2E2C1694894FAB27 /* Release */,
+				BFA8E371D3A131ED455A89BFEC07EB3E /* Debug */,
+				966469C9CCDB0C98F5FF9B30B24BEEA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB4F75954178E41ED297F082C0D8F828 /* Build configuration list for PBXNativeTarget "Pods-VCSwiftToolkit_Example" */ = {
+		39EFEFF162F2A1C847505A2978FBAEA6 /* Build configuration list for PBXNativeTarget "EFQRCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C0DC1731F2BDC45AAAEF2F6B77DDB232 /* Debug */,
-				8FCAAFDDFFE43984C7DDAF1D5E6AFF30 /* Release */,
+				E84CBE4C976C4E6F7EB690EC9EAA2CD7 /* Debug */,
+				5F122F1628CDB3A34BD2049B1ECD705C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

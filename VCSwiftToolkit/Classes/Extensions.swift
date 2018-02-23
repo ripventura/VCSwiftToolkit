@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import QRCode
+import EFQRCode
 
 extension Dictionary {
     /** Appends another dictionary into this one */
@@ -221,12 +221,14 @@ extension String {
      * Returns a QRCode image from a String, with the given Size and Color
      */
     public func vcQRCode(size: CGSize, color: UIColor = .black, backgroundColor: UIColor = .white) -> UIImage? {
-        var qrCode = QRCode(self)
-        qrCode?.size = size
-        qrCode?.color = color.vcCIColor
-        qrCode?.backgroundColor = backgroundColor.vcCIColor
-        
-        return qrCode?.image
+        let generator = EFQRCodeGenerator(content: self, size: EFIntSize(width: Int(size.width), height: Int(size.height)))
+        generator.setMode(mode: EFQRCodeMode.none)
+        generator.setColors(backgroundColor: backgroundColor.vcCIColor, foregroundColor: color.vcCIColor)
+
+        if let cgImage = generator.generate() {
+             return UIImage(cgImage: cgImage)
+        }
+        return nil
     }
     
     /**

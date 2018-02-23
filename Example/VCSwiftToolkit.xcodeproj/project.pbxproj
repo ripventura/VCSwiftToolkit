@@ -51,7 +51,7 @@
 		607FACE51AFB9204008FA782 /* VCSwiftToolkit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VCSwiftToolkit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		643DDF97B167EF4493F94D15 /* Pods-VCSwiftToolkit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCSwiftToolkit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VCSwiftToolkit_Tests/Pods-VCSwiftToolkit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		71112E25DCFA9E20EECD0DC6 /* VCSwiftToolkit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VCSwiftToolkit.podspec; path = ../VCSwiftToolkit.podspec; sourceTree = "<group>"; };
+		71112E25DCFA9E20EECD0DC6 /* VCSwiftToolkit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VCSwiftToolkit.podspec; path = ../VCSwiftToolkit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		712E0EE191BEC6FFE3FE3BDC /* Pods-VCSwiftToolkit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCSwiftToolkit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-VCSwiftToolkit_Example/Pods-VCSwiftToolkit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8605CDB48CFCC6EE30912E99 /* Pods_VCSwiftToolkit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCSwiftToolkit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9EB8A0243EB81AE03AEBA17 /* Pods_VCSwiftToolkit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCSwiftToolkit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -336,12 +336,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VCSwiftToolkit_Example/Pods-VCSwiftToolkit_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
+				"${BUILT_PRODUCTS_DIR}/EFQRCode/EFQRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/VCSwiftToolkit/VCSwiftToolkit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EFQRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VCSwiftToolkit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

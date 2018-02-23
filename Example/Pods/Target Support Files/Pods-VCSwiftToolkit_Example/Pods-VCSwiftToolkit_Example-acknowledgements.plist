@@ -14,9 +14,7 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>The MIT License (MIT)
-
-Copyright (c) 2015 Alexander Schuch (http://schuch.me)
+			<string>Copyright (c) 2017 EyreFree &lt;eyrefree@eyrefree.org&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -39,7 +37,7 @@ THE SOFTWARE.
 			<key>License</key>
 			<string>MIT</string>
 			<key>Title</key>
-			<string>QRCode</string>
+			<string>EFQRCode</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

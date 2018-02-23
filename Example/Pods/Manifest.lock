@@ -1,10 +1,10 @@
 PODS:
-  - QRCode (2.0)
-  - VCSwiftToolkit (0.1.8):
-    - QRCode (= 2.0)
+  - EFQRCode (4.2.0)
+  - VCSwiftToolkit (0.1.9):
+    - EFQRCode (= 4.2)
 
 DEPENDENCIES:
-  - QRCode (= 2.0)
+  - EFQRCode (= 4.2)
   - VCSwiftToolkit (from `../`)
 
 EXTERNAL SOURCES:
@@ -12,9 +12,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
-  VCSwiftToolkit: b43f56c707a42571efdbfeed0b46446368a579df
+  EFQRCode: 1308651fdaa9e3d72b704cb23b32a3f6f8bb1ef1
+  VCSwiftToolkit: 0cb64d976f461e96404c64ccaeb825265a8cadb5
 
-PODFILE CHECKSUM: 918cf11ccc3f4d0e87a92115f8e93f404afafddd
+PODFILE CHECKSUM: 88064bcbc5cac889138f9dd0c13a519279baf20b
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

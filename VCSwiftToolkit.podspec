@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VCSwiftToolkit'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = 'Collection of useful classes for iOS development written in Swift 3'
 
 # This description is used to generate tags and improve search results.
@@ -40,5 +40,5 @@ For Documentation please head to Wiki: https://github.com/ripventura/VCSwiftTool
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-s.dependency 'QRCode', '2.0'
+s.dependency 'EFQRCode', '4.2'
 end

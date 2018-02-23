@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'VCSwiftToolkit_Example' do
   pod 'VCSwiftToolkit', :path => '../'
-  pod 'QRCode', '2.0'
+  pod 'EFQRCode', '4.2'
 
   target 'VCSwiftToolkit_Tests' do
     inherit! :search_paths

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import QRCode
 
 public let radiansToDegrees: (CGFloat) -> CGFloat = {
     return $0 * (180.0 / CGFloat(Double.pi))

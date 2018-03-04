@@ -28,7 +28,7 @@ public struct EnUSReadableIntervalLocale: ReadableIntervalLocaleProtocol {
     
     public var justNow: String {
         get {
-            return "justNow"
+            return "just now"
         }
     }
     public var about: String {
